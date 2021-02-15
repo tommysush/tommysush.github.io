@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://tommysush.github.io/sitemap.xml

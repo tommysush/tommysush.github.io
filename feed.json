@@ -1,0 +1,13 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Lab3F",
+    "description": "",
+    "home_page_url": "https://tommysush.github.io",
+    "feed_url": "https://tommysush.github.io/feed.json",
+    "user_comment": "",
+    "author": {
+        "name": "FIRE From Forty"
+    },
+    "items": [
+    ]
+}
