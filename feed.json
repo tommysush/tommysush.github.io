@@ -5,9 +5,26 @@
     "home_page_url": "https://tommysush.github.io",
     "feed_url": "https://tommysush.github.io/feed.json",
     "user_comment": "",
+    "icon": "https://tommysush.github.io/media/website/android-chrome-512x512.png",
     "author": {
-        "name": "FIRE From Forty"
+        "name": "PI of Lab3F"
     },
     "items": [
+        {
+            "id": "https://tommysush.github.io/xie-zai-zhi-qian.html",
+            "url": "https://tommysush.github.io/xie-zai-zhi-qian.html",
+            "title": "寫在之前",
+            "summary": "This is a test writing.",
+            "content_html": "<p>This is a test writing.</p>",
+            "image": "https://tommysush.github.io/media/posts/1/jan-kahanek-fVUl6kzIvLg-unsplash.jpg",
+            "author": {
+                "name": "PI of Lab3F"
+            },
+            "tags": [
+                   "FIRE"
+            ],
+            "date_published": "2021-02-18T00:08:21+08:00",
+            "date_modified": "2021-02-18T00:19:13+08:00"
+        }
     ]
 }

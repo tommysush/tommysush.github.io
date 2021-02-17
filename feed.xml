@@ -3,10 +3,33 @@
     <title>Lab3F</title>
     <link href="https://tommysush.github.io/feed.xml" rel="self" />
     <link href="https://tommysush.github.io" />
-    <updated>1970-01-01T08:00:00+08:00</updated>
+    <updated>2021-02-18T00:19:13+08:00</updated>
     <author>
-        <name>FIRE From Forty</name>
+        <name>PI of Lab3F</name>
     </author>
     <id>https://tommysush.github.io</id>
 
+    <entry>
+        <title>寫在之前</title>
+        <author>
+            <name>PI of Lab3F</name>
+        </author>
+        <link href="https://tommysush.github.io/xie-zai-zhi-qian.html"/>
+        <id>https://tommysush.github.io/xie-zai-zhi-qian.html</id>
+            <category term="FIRE"/>
+
+        <updated>2021-02-18T00:19:13+08:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://tommysush.github.io/media/posts/1/jan-kahanek-fVUl6kzIvLg-unsplash.jpg" alt="" />
+                    This is a test writing.
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <img src="https://tommysush.github.io/media/posts/1/jan-kahanek-fVUl6kzIvLg-unsplash.jpg" alt="" />
+                <p>This is a test writing.</p>
+            ]]>
+        </content>
+    </entry>
 </feed>
