@@ -3,7 +3,7 @@
     <title>Lab3F</title>
     <link href="https://tommysush.github.io/feed.xml" rel="self" />
     <link href="https://tommysush.github.io" />
-    <updated>2021-02-19T00:16:49+08:00</updated>
+    <updated>2021-02-19T00:29:39+08:00</updated>
     <author>
         <name>PI of Lab3F</name>
     </author>
@@ -16,9 +16,10 @@
         </author>
         <link href="https://tommysush.github.io/xie-zai-zhi-qian.html"/>
         <id>https://tommysush.github.io/xie-zai-zhi-qian.html</id>
+            <category term="Retrospection"/>
             <category term="FIRE"/>
 
-        <updated>2021-02-19T00:16:49+08:00</updated>
+        <updated>2021-02-19T00:29:39+08:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://tommysush.github.io/media/posts/1/jan-kahanek-fVUl6kzIvLg-unsplash.jpg" alt="Photo by Jan Kahánek on Unsplash" />
