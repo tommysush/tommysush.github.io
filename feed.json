@@ -10,6 +10,22 @@
     },
     "items": [
         {
+            "id": "https://tommysush.github.io/ce-shigoogle-photo-zuo-wei-tu-ceng.html",
+            "url": "https://tommysush.github.io/ce-shigoogle-photo-zuo-wei-tu-ceng.html",
+            "title": "Publii 對 Google 相簿 和 YouTube 的支援測試",
+            "summary": "測試結果Image：透過 Google 相簿連結轉換工具後，即可順利插入圖片（正常使用😄）Gallery：只能插入電腦檔案，無法以網址連結建立（無法使用😢）Media：只要直接貼上 Youtube 影片的連結網址即可（正常使用😄）使用建議圖片的 Class 設定值，使用 Wide image 或 Centered image 即可，長寬無需自訂如果想展示多張圖片，只能組合 Left-aligned image 和 Right-aligned image，但不建議這樣使用。如果排版因此跑掉，可以在 &lt; &gt; HTML 模式下調整。👇以下為 Image 不同 Class 設定的展示👇 YouTube影片",
+            "content_html": "<h4><span style=\"color: #2dc26b;\"><strong>測試結果</strong></span></h4>\n<ul>\n<li><span style=\"color: #3598db;\"><strong>Image</strong></span>：透過 <a href=\"https://www.oxxostudio.tw/project/google-photo/\" target=\"_blank\" rel=\"nofollow noopener noreferrer\">Google 相簿連結轉換工具</a>後，即可順利插入圖片（正常使用😄）</li>\n<li><span style=\"color: #3598db;\"><strong>Gallery</strong></span>：只能插入電腦檔案，無法以網址連結建立（無法使用😢）</li>\n<li><span style=\"color: #3598db;\"><strong>Media</strong></span>：只要直接貼上 Youtube 影片的連結網址即可（正常使用😄）</li>\n</ul>\n<h4><span style=\"color: #2dc26b;\"><strong>使用建議</strong></span></h4>\n<ul>\n<li>圖片的 Class 設定值，使用 <em>Wide image</em> 或 <em>Centered image</em> 即可，長寬無需自訂</li>\n<li>如果想展示多張圖片，只能組合 <em>Left-aligned image</em> 和 <em>Right-aligned image</em>，但不建議這樣使用。如果排版因此跑掉，可以在 <span style=\"color: #3598db;\"><strong>&lt; &gt; HTML</strong></span> 模式下調整。</li>\n</ul>\n<p class=\"align-center\">👇以下為 <span style=\"color: #3598db;\"><strong>Image</strong></span> 不同 Class 設定的展示👇</p>\n<figure class=\"post__image post__image--full\" ><img loading=\"lazy\" src=\"https://lh3.googleusercontent.com/Cnyl5C97Sd2--KMcsnxtoSw1N4I014ymR5m3Ykca9UkyokVC6qQGeZu_Sx6K2kaKjnAuC8ESoReVZHgvcIYdJHGE9oyd4LlIbdZifkA7Do4nJH1fSu1afJJngT1aTTd5_SmiWw4C=w1200\" data-is-external-image=\"true\"  alt=\"Cama Cafe（Full image）\" width=\"\" height=\"\">\n<figcaption ><span style=\"color: #e03e2d;\"><strong>單張照片（Full Image）</strong></span></figcaption>\n</figure>\n<figure class=\"post__image post__image--wide\" ><img loading=\"lazy\" src=\"https://lh3.googleusercontent.com/Cnyl5C97Sd2--KMcsnxtoSw1N4I014ymR5m3Ykca9UkyokVC6qQGeZu_Sx6K2kaKjnAuC8ESoReVZHgvcIYdJHGE9oyd4LlIbdZifkA7Do4nJH1fSu1afJJngT1aTTd5_SmiWw4C=w1200\" data-is-external-image=\"true\"  alt=\"Cama cafe（Wide image）\" width=\"1200\" height=\"761\">\n<figcaption ><span style=\"color: #e03e2d;\"><strong>單張照片（Wide Image）</strong></span></figcaption>\n</figure>\n<figure class=\"post__image post__image--left\" ><img loading=\"lazy\" src=\"https://lh3.googleusercontent.com/Cnyl5C97Sd2--KMcsnxtoSw1N4I014ymR5m3Ykca9UkyokVC6qQGeZu_Sx6K2kaKjnAuC8ESoReVZHgvcIYdJHGE9oyd4LlIbdZifkA7Do4nJH1fSu1afJJngT1aTTd5_SmiWw4C=w1200\" data-is-external-image=\"true\"  alt=\"Cama Cafe（Left-aligned image）\" width=\"200\" height=\"128\">\n<figcaption ><strong><span style=\"color: #e03e2d;\">單張照片（Left-aligned Image）</span></strong></figcaption>\n</figure>\n<figure class=\"post__image post__image--right\" ><img loading=\"lazy\" src=\"https://lh3.googleusercontent.com/Cnyl5C97Sd2--KMcsnxtoSw1N4I014ymR5m3Ykca9UkyokVC6qQGeZu_Sx6K2kaKjnAuC8ESoReVZHgvcIYdJHGE9oyd4LlIbdZifkA7Do4nJH1fSu1afJJngT1aTTd5_SmiWw4C=w1200\" data-is-external-image=\"true\"  alt=\"Cama Cafe（Right-aligned image）\" width=\"200\" height=\"128\">\n<figcaption ><span style=\"color: #e03e2d;\"><strong>單張照片（Right-aligned image）</strong></span></figcaption>\n</figure>\n<figure class=\"post__image post__image--center\" ><img loading=\"lazy\" src=\"https://lh3.googleusercontent.com/Cnyl5C97Sd2--KMcsnxtoSw1N4I014ymR5m3Ykca9UkyokVC6qQGeZu_Sx6K2kaKjnAuC8ESoReVZHgvcIYdJHGE9oyd4LlIbdZifkA7Do4nJH1fSu1afJJngT1aTTd5_SmiWw4C=w1200\" data-is-external-image=\"true\"  alt=\"Cama Cafe（Centered image）\" width=\"200\" height=\"128\">\n<figcaption ><span style=\"color: #e03e2d;\"><strong>單張照片（Centered image）</strong></span></figcaption>\n</figure>\n<figure class=\"post__video\"><iframe loading=\"lazy\" width=\"560\" height=\"314\" src=\"https://www.youtube.com/embed/erqYCXR7jrw\" allowfullscreen=\"allowfullscreen\" data-mce-fragment=\"1\"></iframe></figure>\n<p class=\"align-center\"><span style=\"color: #e03e2d;\"><strong>YouTube影片</strong></span></p>",
+            "image": "https://tommysush.github.io/media/posts/2/rajeshwar-bachu-K4txLik7pnY-unsplash.jpg",
+            "author": {
+                "name": "PI of Lab3F"
+            },
+            "tags": [
+                   "Self-Learned"
+            ],
+            "date_published": "2021-02-19T23:53:11+08:00",
+            "date_modified": "2021-02-20T00:57:57+08:00"
+        },
+        {
             "id": "https://tommysush.github.io/xie-zai-zhi-qian.html",
             "url": "https://tommysush.github.io/xie-zai-zhi-qian.html",
             "title": "寫在之前 Some things must be written first.",
@@ -24,7 +40,7 @@
                    "FIRE"
             ],
             "date_published": "2021-02-18T00:08:21+08:00",
-            "date_modified": "2021-02-19T00:29:39+08:00"
+            "date_modified": "2021-02-19T23:48:44+08:00"
         }
     ]
 }
