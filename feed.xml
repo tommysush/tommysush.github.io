@@ -3,7 +3,7 @@
     <title>Lab3F</title>
     <link href="https://tommysush.github.io/feed.xml" rel="self" />
     <link href="https://tommysush.github.io" />
-    <updated>2021-02-21T15:24:28+08:00</updated>
+    <updated>2021-02-21T15:40:43+08:00</updated>
     <author>
         <name>PI of Lab3F</name>
     </author>
@@ -19,16 +19,16 @@
             <category term="Swift &amp; SwiftUI"/>
             <category term="Self-Learned"/>
 
-        <updated>2021-02-21T15:24:28+08:00</updated>
+        <updated>2021-02-21T15:40:43+08:00</updated>
             <summary>
                 <![CDATA[
-                        <img src="https://tommysush.github.io/media/posts/6/joshua-reddekopp-SyYmXSDnJ54-unsplash.jpg" alt="An MacBook Pro on desktop" />
+                        <img src="https://tommysush.github.io/media/posts/6/joshua-reddekopp-SyYmXSDnJ54-unsplash.jpg" alt="Photo by Joshua Reddekopp on Unsplash" />
                     利用 SwiftUI 開發的過程中，經常會在 ContentView 底下將 property 冠上 @State 這個 property wrapper，並將其作為 parameter 引入其他 view 或 controller。若 view 或 controller 同時是與使用者互動的 UI（user interface），parameter 通常必須是 Binding&lt;Value&gt; ，此時，我們會進一步在 property 變數前加上 $ 。範例如下： struct ContenView: View { @State private var fontSize: CGFloat = 35 var body: some View {&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                    <img src="https://tommysush.github.io/media/posts/6/joshua-reddekopp-SyYmXSDnJ54-unsplash.jpg" alt="An MacBook Pro on desktop" />
+                    <img src="https://tommysush.github.io/media/posts/6/joshua-reddekopp-SyYmXSDnJ54-unsplash.jpg" alt="Photo by Joshua Reddekopp on Unsplash" />
                 <p>利用 SwiftUI 開發的過程中，經常會在 <strong>ContentView</strong> 底下將 property 冠上 <code>@State</code> 這個 property wrapper，並將其作為 parameter 引入其他 view 或 controller。若 view 或 controller 同時是與使用者互動的 UI（user interface），parameter 通常必須是 <code>Binding&lt;Value&gt;</code> ，此時，我們會進一步在 property 變數前加上 <code>$</code> 。範例如下：</p>
 <pre><code class="language-swift">struct ContenView: View {
     @State private var fontSize: CGFloat = 35
@@ -86,16 +86,16 @@
         <id>https://tommysush.github.io/ce-shigoogle-photo-zuo-wei-tu-ceng.html</id>
             <category term="Self-Learned"/>
 
-        <updated>2021-02-21T00:27:06+08:00</updated>
+        <updated>2021-02-21T15:40:30+08:00</updated>
             <summary>
                 <![CDATA[
-                        <img src="https://tommysush.github.io/media/posts/2/rajeshwar-bachu-K4txLik7pnY-unsplash.jpg" alt="Google Logo" />
+                        <img src="https://tommysush.github.io/media/posts/2/rajeshwar-bachu-K4txLik7pnY-unsplash.jpg" alt="Photo by Rajeshwar Bachu on Unsplash" />
                     測試結果Image：透過 Google 相簿連結轉換工具後，即可順利插入圖片（正常使用😄）Gallery：只能插入電腦檔案，無法以網址連結建立（無法使用😢）Media：只要直接貼上 Youtube 影片的連結網址即可（正常使用😄）使用建議圖片的 Class 設定值，使用 Wide image 或 Centered image 即可，長寬無需自訂如果想展示多張圖片，只能組合 Left-aligned image 和 Right-aligned image，但不建議這樣使用。如果排版因此跑掉，可以在 &lt; &gt; HTML 模式下調整。👇以下為 Image 不同 Class 設定的展示👇 YouTube影片
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                    <img src="https://tommysush.github.io/media/posts/2/rajeshwar-bachu-K4txLik7pnY-unsplash.jpg" alt="Google Logo" />
+                    <img src="https://tommysush.github.io/media/posts/2/rajeshwar-bachu-K4txLik7pnY-unsplash.jpg" alt="Photo by Rajeshwar Bachu on Unsplash" />
                 <h4><span style="color: #2dc26b;"><strong>測試結果</strong></span></h4>
 <ul>
 <li><span style="color: #3598db;"><strong>Image</strong></span>：透過 <a href="https://www.oxxostudio.tw/project/google-photo/" target="_blank" rel="nofollow noopener noreferrer">Google 相簿連結轉換工具</a>後，即可順利插入圖片（正常使用😄）</li>
