@@ -3,12 +3,80 @@
     <title>Lab3F</title>
     <link href="https://tommysush.github.io/feed.xml" rel="self" />
     <link href="https://tommysush.github.io" />
-    <updated>2021-02-20T01:03:26+08:00</updated>
+    <updated>2021-02-21T15:21:57+08:00</updated>
     <author>
         <name>PI of Lab3F</name>
     </author>
     <id>https://tommysush.github.io</id>
 
+    <entry>
+        <title>淺談 @State property wrapper in SwiftUI</title>
+        <author>
+            <name>PI of Lab3F</name>
+        </author>
+        <link href="https://tommysush.github.io/qian-tan-state-property-wrapper-in-swiftui.html"/>
+        <id>https://tommysush.github.io/qian-tan-state-property-wrapper-in-swiftui.html</id>
+            <category term="Swift &amp; SwiftUI"/>
+            <category term="Self-Learned"/>
+
+        <updated>2021-02-21T15:21:57+08:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://tommysush.github.io/media/posts/6/joshua-reddekopp-SyYmXSDnJ54-unsplash.jpg" alt="An MacBook Pro on desktop" />
+                    利用 SwiftUI 開發的過程中，經常會在 ContentView 底下將 property 冠上 @State 這個 property wrapper，並將其作為 parameter 引入其他 view 或 controller。若 view 或 controller 同時是與使用者互動的 UI（user interface），parameter 通常必須是 Binding&lt;Value&gt; ，此時，我們會進一步在 property 變數前加上 $ 。範例如下： struct ContenView: View { @State private var fontSize: CGFloat = 35 var body: some View {&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <img src="https://tommysush.github.io/media/posts/6/joshua-reddekopp-SyYmXSDnJ54-unsplash.jpg" alt="An MacBook Pro on desktop" />
+                <p>利用 SwiftUI 開發的過程中，經常會在 <strong>ContentView</strong> 底下將 property 冠上 <code>@State</code> 這個 property wrapper，並將其作為 parameter 引入其他 view 或 controller。若 view 或 controller 同時是與使用者互動的 UI（user interface），parameter 通常必須是 <code>Binding&lt;Value&gt;</code> ，此時，我們會進一步在 property 變數前加上 <code>$</code> 。範例如下：</p>
+<pre><code class="language-swift">struct ContenView: View {
+    @State private var fontSize: CGFloat = 35
+
+    var body: some View {
+        Text(&quot;Hello world&quot;)
+            .font(.custom(name: &quot;Helvetica&quot;, size: fontSize))
+        Slider(value: $fontSize, in: 10...60)
+    }
+}</code></pre>
+<p>根據 SwiftUI 的定義，<code>@State</code> property wrapper 實際上是一個 struct，而存入的值其實是放置在名為 <strong>wrappedValue</strong> 的變數中。</p>
+<pre><code class="language-siwft">@propertyWrapper public struct State&lt;Value&gt; : DynamicProperty {
+    ...
+    public var wrappedValue: Value { get nonmutating set }
+}</code></pre>
+<p><strong>wrappedValue</strong> 本身可以被讀取（get）、也可以被寫入（set），但 SwiftUI 是在其他地方保存值以進行利用，所以寫入不會對 struct 產生任何改變（nonmutating）。因此，我們無法利用 property observer 來觀察或加入其他動作（e.g. <code>print(newValue)</code>），對於 property observer 來說，它所負責監看的，是 <strong>包裹著變數的 State struct</strong> 本身究竟有無改變，既然沒有改變就無法觸發 observer 內的動作。</p>
+<p>如果非得要觀察或加入動作的話，必須透過 <code>Binding&lt;Value&gt;</code> 來達成。其定義如下：</p>
+<pre><code class="language-swift">@propertyWrapper @dynamicMemberLookup public struct Binding&lt;Value&gt; {
+    ...
+    public init(get: @escaping () -&gt; Value, set: @escaping (Value) -&gt; Void)
+}</code></pre>
+<p>做法是在原先的 view 或 controller 底下加入一個 Binding 變數，然後在 getter 中將 State 變數指定給它，而在 setter 中則是將 newValue（亦可用 shortcut <code>$0</code>）設定給 Binding 變數。最後，只要將原先 view 或 controller 底下的替換掉即可。範例如下：</p>
+<pre><code class="language-siwft">struct ContenView: View {
+    @State private var fontSize: CGFloat = 35
+
+    var body: some View {
+        // 新增的 Binding 變數
+        let size: Binding&lt;CGFloat&gt;(
+            get: {
+                return self.fontSize
+            }, set: { newValue in
+                self.fontSize = newValue
+                print(&quot;New value is \(self.fontSize)&quot;)
+            }
+        )
+
+        Text(&quot;Hello world&quot;)
+            .font(.custom(name: &quot;Helvetica&quot;, size: fontSize))
+
+        // 將原先的參數從 $fontSize 替換為 size
+        Slider(value: size, in: 10...60)
+    }
+}</code></pre>
+<p>如此一來，當使用者滑動 slider 時，新的值會透過 setter 傳遞給 fontSize，同時也會 print 出新的值（原先無法以 property observer 完成的動作），而 Text view 也會隨著 fontSize 的改變而加大字體或縮小。</p>
+
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Publii 對 Google 相簿 和 YouTube 的支援測試</title>
         <author>
@@ -18,7 +86,7 @@
         <id>https://tommysush.github.io/ce-shigoogle-photo-zuo-wei-tu-ceng.html</id>
             <category term="Self-Learned"/>
 
-        <updated>2021-02-20T01:03:26+08:00</updated>
+        <updated>2021-02-21T00:27:06+08:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://tommysush.github.io/media/posts/2/rajeshwar-bachu-K4txLik7pnY-unsplash.jpg" alt="Google Logo" />
@@ -37,7 +105,7 @@
 <h4><span style="color: #2dc26b;"><strong>使用建議</strong></span></h4>
 <ul>
 <li>圖片的 Class 設定值，使用 <em>Wide image</em> 或 <em>Centered image</em> 即可，長寬無需自訂</li>
-<li>如果想展示多張圖片，只能組合 <em>Left-aligned image</em> 和 <em>Right-aligned image</em>，但不建議這樣使用。如果排版因此跑掉，可以在 <span style="color: #3598db;"><strong>&lt; &gt; HTML</strong></span> 模式下調整。</li>
+<li>如果想展示多張圖片，只能組合 <em>Left-aligned image</em> 和 <em>Right-aligned image</em>，但不建議這樣使用。如果排版因此跑掉，可以在 <span style="color: #3598db;"><strong>&lt; &gt; HTML </strong></span>模式下調整。</li>
 </ul>
 <p class="align-center">👇以下為 <span style="color: #3598db;"><strong>Image</strong></span> 不同 Class 設定的展示👇</p>
 <figure class="post__image post__image--full" ><img loading="lazy" src="https://lh3.googleusercontent.com/Cnyl5C97Sd2--KMcsnxtoSw1N4I014ymR5m3Ykca9UkyokVC6qQGeZu_Sx6K2kaKjnAuC8ESoReVZHgvcIYdJHGE9oyd4LlIbdZifkA7Do4nJH1fSu1afJJngT1aTTd5_SmiWw4C=w1200" data-is-external-image="true"  alt="Cama Cafe（Full image）" width="" height="">
