@@ -3,7 +3,7 @@
     <title>Lab3F</title>
     <link href="https://tommysush.github.io/feed.xml" rel="self" />
     <link href="https://tommysush.github.io" />
-    <updated>2021-03-04T22:04:31+08:00</updated>
+    <updated>2021-03-05T09:03:32+08:00</updated>
     <author>
         <name>PI of Lab3F</name>
     </author>
@@ -19,7 +19,7 @@
             <category term="Taiwan Equity"/>
             <category term="Asset Management"/>
 
-        <updated>2021-03-04T22:04:31+08:00</updated>
+        <updated>2021-03-05T08:16:40+08:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://tommysush.github.io/media/posts/13/markus-winkler-3t3Tk-BYiA4-unsplash.jpg" alt="Photo by Markus Winkler on Unsplash" />
@@ -62,7 +62,8 @@
 </li>
 <li>新建工程預計的完成時間點為何時？預計可再提高多少產能(或滿載時可挹注多少營收)。
 <ul style="list-style-type: square;">
-<li><span style="color: #3598db;">新廠預計112年Q2前完工；若滿載狀態會增加年營收約10億左右。</span></li>
+<li><span style="color: #3598db;">新廠預計112年Q2前完工；若滿載狀態會增加年營收約10億左右。<br></span></li>
+<li>（個人補充：<span class="s1">2018</span>年擴廠完成時，滿載月營收可增加<span class="s1">5,000</span>萬元，本次擴廠後滿載時月營收可再增加<span class="s1">8,000</span>萬元，因此<span style="color: #3598db;">滿載的月營收估約<span class="s1">2.5</span>億元</span>。）</li>
 </ul>
 </li>
 <li>近期營收回溫，主要是那個領域的產品挹注。另外，2020年個領域產品的營收佔比為何。
@@ -512,6 +513,79 @@
 </li>
 </ol>
 <div> </div>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Integrating MapKit with SwiftUI, 初探</title>
+        <author>
+            <name>PI of Lab3F</name>
+        </author>
+        <link href="https://tommysush.github.io/integrating-mapkit-with-swiftui-chu-tan.html"/>
+        <id>https://tommysush.github.io/integrating-mapkit-with-swiftui-chu-tan.html</id>
+            <category term="Swift &amp; SwiftUI"/>
+            <category term="Self-Taught"/>
+
+        <updated>2021-03-05T09:03:32+08:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://tommysush.github.io/media/posts/9/henry-perks-BJXAxQ1L7dI-unsplash.jpg" alt="Photo by henry perks on Unsplash" />
+                    想要在 app 裡加入 map 的功能時，必須使用 MapKit framework 底下的 MKMapView class（詳見 Apple 文件），其定義如下： // An embeddable map interface, similar to the one provided by the Maps application.class MKMapView : UIView由於 MKMapView 是一個 UIView，因此無法直接在 SwiftUI’s View 裡使用它，而是得透過 UIViewRepresentable 這個 wrapper（詳見 Apple 文件）來將它包裝成 SwiftUI 認得的 View。 // A&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <img src="https://tommysush.github.io/media/posts/9/henry-perks-BJXAxQ1L7dI-unsplash.jpg" alt="Photo by henry perks on Unsplash" />
+                <p>想要在 app 裡加入 map 的功能時，必須使用 MapKit framework 底下的 <strong><em>MKMapView</em></strong> class（<a href="https://developer.apple.com/documentation/mapkit/mkmapview">詳見 Apple 文件</a>），其定義如下：</p>
+<pre><code class="language-swift">// An embeddable map interface, similar to the one provided by the Maps application.
+
+class MKMapView : UIView</code></pre>
+<p>由於 MKMapView 是一個 UIView，因此無法直接在 SwiftUI’s View 裡使用它，而是得透過 <strong><em>UIViewRepresentable</em></strong> 這個 wrapper（<a href="https://developer.apple.com/documentation/swiftui/uiviewrepresentable">詳見 Apple 文件</a>）來將它包裝成 SwiftUI 認得的 View。</p>
+<pre><code class="language-swift">// A wrapper for a UIKit view that you use to integrate that view into your SwiftUI view hierarchy.
+
+protocol UIViewRepresentable : View where Self.Body == Never</code></pre>
+<p>首先，開啟一個新的App專案，並在專案底下新增一個 SwiftUI View 檔案，取名為 “MapView”。</p>
+<ol>
+<li>由於會使用到 MapKit，因此在 import SwiftUI 的下一行將其導入。</li>
+<li>另外，讓創建的 MapView struct 遵循 UIViewRepresentable protocol。</li>
+</ol>
+<pre><code class="language-swift">// MapView.swift
+
+import SwiftUI
+import MapKit
+
+struct MapView: UIViewRepresentable {
+    // more code
+}</code></pre>
+<p>不過，Xcode 無法編譯以上程式碼，並會出現這樣的錯誤訊息：
+“<strong><em>Type ‘MapView’ does not conform to protocol ‘UIViewRepresentable’</em></strong>“。所以，接著必須在 “more code” 的位置插入兩個 function，分別是 <strong>makeUIView()</strong> 和 <strong>updateUIView()</strong>。</p>
+<pre><code class="language-swift">struct MapView: UIViewRepresentable {
+    func makeUIView(context: Context) -&gt; MKMapView {
+        let mapView = MKMapView()
+        return mapView
+    }
+
+    func updateUIView(_ uiView: MKMapView, context: Context) {
+
+    }
+}</code></pre>
+<p>有一點要注意的是，我們在這兩個 function 的 context 參數中直接賦予值 “Context”，其實 Context 所代表的是 <strong>UIViewRepresentableContext&lt;MapView&gt;</strong> ，之所以能簡化為 Context，是因為在 UIViewRepresentable 裡有著這樣的定義（在 Xcode 裡按下 <strong>Cmd + Shift + O</strong>，查找 UIViewRepresentable ）。</p>
+<pre><code class="language-swift">public protocol UIViewRepresentable : View where Self.Body == Never {
+    ...
+    typealias Context = UIViewRepresentableContext&lt;Self&gt;
+}</code></pre>
+<p>至此，我們已可將創建的 MapView 用於 SwiftUI View，讓我們的 app 出現 map 囉！</p>
+<pre><code class="language-swift">// ContentView.swift
+
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        MapView()
+            .edgesIgnoringSafeArea(.all)
+    }
+}</code></pre>
+
             ]]>
         </content>
     </entry>
