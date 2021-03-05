@@ -3,12 +3,143 @@
     <title>Lab3F</title>
     <link href="https://tommysush.github.io/feed.xml" rel="self" />
     <link href="https://tommysush.github.io" />
-    <updated>2021-03-05T15:51:45+08:00</updated>
+    <updated>2021-03-05T21:13:38+08:00</updated>
     <author>
         <name>PI of Lab3F</name>
     </author>
     <id>https://tommysush.github.io</id>
 
+    <entry>
+        <title>Integrating MapKit with SwiftUI, 續篇(1)</title>
+        <author>
+            <name>PI of Lab3F</name>
+        </author>
+        <link href="https://tommysush.github.io/integrating-mapkit-with-swiftui-xu-pian1.html"/>
+        <id>https://tommysush.github.io/integrating-mapkit-with-swiftui-xu-pian1.html</id>
+            <category term="Swift &amp; SwiftUI"/>
+            <category term="Self-Taught"/>
+
+        <updated>2021-03-05T21:13:38+08:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://tommysush.github.io/media/posts/16/henry-perks-BJXAxQ1L7dI-unsplash.jpg" alt="Photo by henry perks on Unsplash" />
+                     前文提到如何利用 UIViewRepresentable wrapper 將 MapKit 的 MKMapView 加入 SwiftUI View。我們成功地為 app 加入 map，但也僅止於此。當我們移動或扭轉 map 時，其改變的展示區域（region）及中心點（centerCoordinate）等資訊，並沒有從 SwiftUI View 傳遞給 MapView，這是因為由 UIViewRepresentable 包裹而成的 MapView struct 裡缺少了負責傳遞資訊的 Coordinator。 public protocol UIViewRepresentable : View where Self.Body == Never { ... /// Implement this method if changes to your&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <img src="https://tommysush.github.io/media/posts/16/henry-perks-BJXAxQ1L7dI-unsplash.jpg" alt="Photo by henry perks on Unsplash" />
+                
+  <p>
+    <a href="https://tommysush.github.io/integrating-mapkit-with-swiftui-chu-tan-3.html" target="_blank">前文</a>提到如何利用 <code>UIViewRepresentable</code> wrapper 將 MapKit 的 <code>MKMapView</code> 加入 SwiftUI View。我們成功地為 app 加入 map，但也<em>僅止於此</em>。當我們移動或扭轉 map 時，其改變的展示區域（region）及中心點（centerCoordinate）等資訊，並沒有從 SwiftUI View 傳遞給 MapView，這是因為由 <code>UIViewRepresentable</code> 包裹而成的 MapView struct 裡缺少了負責傳遞資訊的 <code>Coordinator</code>。
+  </p>
+<pre class="line-numbers  language-swift"><code>public protocol UIViewRepresentable : View where Self.Body == Never {
+    ...
+    /// Implement this method if changes to your view might affect other
+    /// parts of your app. In your implementation, create a custom Swift
+    /// instance that can communicate with other parts of your interface.
+    /// For example, you might provide an instance that binds its variables
+    /// to SwiftUI properties, causing the two to remain synchronized.
+    ///
+    /// SwiftUI calls this method before calling the
+    /// ``UIViewRepresentable/makeUIView(context:)`` method.
+    func makeCoordinator() -&gt; Self.Coordinator
+}</code></pre>
+
+  <p>
+    從上方的官方說明可知，需自定一個 <code>Coordinator</code>，並利用 <code>makeCoordinator()</code> 來產生其實例，此實例就可作為 MapView 和 SwiftUI View&nbsp;的溝通橋樑。接著，按步驟在 MapView struct 裡添加程式碼。
+  </p>
+
+  <ol>
+    <li>創建自定的 <code>Coordinator</code> class，需繼承 <code>NSObject</code>、並且遵循 <code>MKMapViewDelegate</code>&nbsp;protocol。（<a href="https://developer.apple.com/documentation/mapkit/mkmapviewdelegate" target="_blank">詳見官方文件</a>）</li><li>在 class 裡必須告訴它<em><strong>隸屬於誰之下</strong></em>（who's its parent），此例中 parent 即是 MapView。</li><li>接著，利用 <code>makeCoordinator()</code> 來產生它的實例。</li><li>最後，則是在 <code>makeUIView()</code> 裡插入 <code>mapView.delegate = context.coordinator</code>。</li>
+  </ol>
+<pre class="line-numbers  language-swift"><code>// MapView.swift
+
+struct MapView: UIViewRepresentable {
+    
+    /// For example, you might provide an instance that binds its variables
+    /// to SwiftUI properties, causing the two to remain synchronized.
+    class Coordinator: NSObject, MKMapViewDelegate {
+        var parent: MapView
+        
+        init(_ parent: MapView) {
+            self.parent = parent
+        }
+    }
+    
+    /// Creates the custom instance that you use to communicate changes from
+    /// your view to other parts of your SwiftUI interface. SwiftUI calls this
+    /// method before calling the ``makeUIView(context:)`` method.
+    func makeCoordinator() -&gt; Coordinator {
+        Coordinator(self)
+    }
+    
+    /// Creates the view object and configures its initial state.
+    /// You must implement this method and use it to create your view object.
+    /// The system calls this method only once, when it creates your view for
+    /// the first time. For all subsequent updates, the system calls the
+    /// ``updateUIView(_:context:)`` method.
+    func makeUIView(context: Context) -&gt; MKMapView {
+        let mapView = MKMapView()
+        mapView.delegate = context.coordinator
+        return mapView
+    }
+    
+    ...
+}
+</code></pre>
+
+  <p>
+    完成溝通橋樑的搭建之後，還需要完成三件事：
+  </p>
+
+  <ol>
+    <li>分別在 MapView 和 SwiftUI View 裡添加 property 用來存放位置座標，其中 MapView 的是 <em><strong>binding property</strong></em>，用來跟 SwiftUI View 裡的綁定，以<em><strong>確保資料的同步</strong></em>。</li><li>在自定的 <code>Coordinator</code> 裡，完成 <code>mapViewDidChangeVisibleRegion(MKMapView)</code> 的實作。如此一來，當使用者移動地圖時，便會透過這個方法來完成要執行的動作。<br></li><li>最後，由於 MapView 多了新的 <code>centerCoordinate</code>&nbsp;property，別忘了在 SwiftUI View 裡的 <code>MapView()</code>&nbsp;引入參數，並記得加上 binding 的 <code>$</code> 符號。</li>
+  </ol>
+<pre class="line-numbers  language-swift"><code>// MapView.swift
+
+struct MapView: UIViewRepresentable {
+    @Binding var centerCoordinate: CLLocationCoordinate2D
+    
+    class Coordinator: NSObject, MKMapViewDelegate {
+        var parent: MapView
+        
+        init(_ parent: MapView) {
+            self.parent = parent
+        }
+        
+        /// The map view calls this method each time the value of its
+        /// visible region changes.
+        func mapViewDidChangeVisibleRegion(_ mapView: MKMapView) {
+            parent.centerCoordinate = mapView.centerCoordinate
+        }
+    }
+    
+    ...
+}</code></pre>
+<pre class="line-numbers  language-swift"><code>// ContentView.swift
+
+struct ContentView: View {
+    @State private var centerCoordinate = CLLocationCoordinate2D()
+    
+    var body: some View {
+        ZStack {
+            MapView(centerCoordinate: $centerCoordinate)
+                .edgesIgnoringSafeArea(.all)
+        }
+    }
+}</code></pre>
+
+  <p>
+    完成以上步驟之後，當我們再次拖拉或扭轉地圖時，SwiftUI View 便會將變動的狀態透過 Coordinator 傳遞給 MapView，各位不妨在&nbsp;<code>mapViewDidChangeVisibleRegion()</code> 和 <code>updateUIView()</code> 裡分別加上 <code>print("center at: \(parent.centerCoordinate)")</code> 和 <code>print("center at: \(centerCoordinate)")</code>，這樣就能在 Xcode 裡直接觀察到其變化。
+  </p>
+
+  <p>
+    
+  </p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Integrating MapKit with SwiftUI, 初探</title>
         <author>
@@ -19,7 +150,7 @@
             <category term="Swift &amp; SwiftUI"/>
             <category term="Self-Taught"/>
 
-        <updated>2021-03-05T15:51:45+08:00</updated>
+        <updated>2021-03-05T20:54:15+08:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://tommysush.github.io/media/posts/15/henry-perks-BJXAxQ1L7dI-unsplash.jpg" alt="Photo by henry perks on Unsplash" />
@@ -65,7 +196,9 @@ struct MapView: UIViewRepresentable {
   <p>
     不過，Xcode 並無法編譯以上的程式碼，所以會出現以下的錯誤訊息：<br>"&nbsp;<em><strong>Type 'MapView' does not conform to protocol 'UIViewRepresentable</strong>'&nbsp;</em>"。所以，接著必須在&nbsp;"more code" 的位置插入兩個 function，分別是&nbsp;<code>makeUIView()</code>&nbsp;和&nbsp;<code>updateUIView()</code>&nbsp;。
   </p>
-<pre class="line-numbers  language-swift"><code>struct MapView: UIViewRepresentable {
+<pre class="line-numbers  language-swift"><code>//MapView.swift
+
+struct MapView: UIViewRepresentable {
     /// Creates the view object and configures its initial state.
     /// You must implement this method and use it to create your view
     /// object. The system calls this method only once, when it creates
@@ -102,8 +235,11 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        MapView()
-        .edgesIgnoringSafeArea(.all)
+        ZStack {
+            MapView()
+                .edgesIgnoringSafeArea(.all)
+        }
+        
     }
 }</code></pre>
             ]]>
