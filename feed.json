@@ -10,6 +10,23 @@
     },
     "items": [
         {
+            "id": "https://tommysush.github.io/integrating-mapkit-with-swiftui-chu-tan.html",
+            "url": "https://tommysush.github.io/integrating-mapkit-with-swiftui-chu-tan.html",
+            "title": "Integrating MapKit with SwiftUI, 初探",
+            "summary": "想要在 app 裡加入 map 的功能時，必須使用 MapKit framework 底下的 MKMapView class（詳見 Apple 文件），其定義如下： // An embeddable map interface, similar to the one provided by the Maps application.class MKMapView : UIView由於 MKMapView 是一個 UIView，因此無法直接在 SwiftUI’s View 裡使用它，而是得透過 UIViewRepresentable 這個 wrapper（詳見 Apple 文件）來將它包裝成 SwiftUI 認得的 View。 // A&hellip;",
+            "content_html": "<p>想要在 app 裡加入 map 的功能時，必須使用 MapKit framework 底下的 <strong><em>MKMapView</em></strong> class（<a href=\"https://developer.apple.com/documentation/mapkit/mkmapview\">詳見 Apple 文件</a>），其定義如下：</p>\n<pre><code class=\"language-swift\">// An embeddable map interface, similar to the one provided by the Maps application.\n\nclass MKMapView : UIView</code></pre>\n<p>由於 MKMapView 是一個 UIView，因此無法直接在 SwiftUI’s View 裡使用它，而是得透過 <strong><em>UIViewRepresentable</em></strong> 這個 wrapper（<a href=\"https://developer.apple.com/documentation/swiftui/uiviewrepresentable\">詳見 Apple 文件</a>）來將它包裝成 SwiftUI 認得的 View。</p>\n<pre><code class=\"language-swift\">// A wrapper for a UIKit view that you use to integrate that view into your SwiftUI view hierarchy.\n\nprotocol UIViewRepresentable : View where Self.Body == Never</code></pre>\n<p>首先，開啟一個新的App專案，並在專案底下新增一個 SwiftUI View 檔案，取名為 “MapView”。</p>\n<ol>\n<li>由於會使用到 MapKit，因此在 import SwiftUI 的下一行將其導入。</li>\n<li>另外，讓創建的 MapView struct 遵循 UIViewRepresentable protocol。</li>\n</ol>\n<pre><code class=\"language-swift\">// MapView.swift\n\nimport SwiftUI\nimport MapKit\n\nstruct MapView: UIViewRepresentable {\n    // more code\n}</code></pre>\n<p>不過，Xcode 無法編譯以上程式碼，並會出現這樣的錯誤訊息：\n“<strong><em>Type ‘MapView’ does not conform to protocol ‘UIViewRepresentable’</em></strong>“。所以，接著必須在 “more code” 的位置插入兩個 function，分別是 <strong>makeUIView()</strong> 和 <strong>updateUIView()</strong>。</p>\n<pre><code class=\"language-swift\">struct MapView: UIViewRepresentable {\n    func makeUIView(context: Context) -&gt; MKMapView {\n        let mapView = MKMapView()\n        return mapView\n    }\n\n    func updateUIView(_ uiView: MKMapView, context: Context) {\n\n    }\n}</code></pre>\n<p>有一點要注意的是，我們在這兩個 function 的 context 參數中直接賦予值 “Context”，其實 Context 所代表的是 <strong>UIViewRepresentableContext&lt;MapView&gt;</strong> ，之所以能簡化為 Context，是因為在 UIViewRepresentable 裡有著這樣的定義（在 Xcode 裡按下 <strong>Cmd + Shift + O</strong>，查找 UIViewRepresentable ）。</p>\n<pre><code class=\"language-swift\">public protocol UIViewRepresentable : View where Self.Body == Never {\n    ...\n    typealias Context = UIViewRepresentableContext&lt;Self&gt;\n}</code></pre>\n<p>至此，我們已可將創建的 MapView 用於 SwiftUI View，讓我們的 app 出現 map 囉！</p>\n<pre><code class=\"language-swift\">// ContentView.swift\n\nimport SwiftUI\n\nstruct ContentView: View {\n    var body: some View {\n        MapView()\n            .edgesIgnoringSafeArea(.all)\n    }\n}</code></pre>\n",
+            "image": "https://tommysush.github.io/media/posts/9/henry-perks-BJXAxQ1L7dI-unsplash.jpg",
+            "author": {
+                "name": "PI of Lab3F"
+            },
+            "tags": [
+                   "Swift &amp; SwiftUI",
+                   "Self-Taught"
+            ],
+            "date_published": "2021-03-05T09:03:00+08:00",
+            "date_modified": "2021-03-05T09:05:41+08:00"
+        },
+        {
             "id": "https://tommysush.github.io/bo-da-ke-ji-dai-hao-8109.html",
             "url": "https://tommysush.github.io/bo-da-ke-ji-dai-hao-8109.html",
             "title": "博大科技（代號: 8109）",
@@ -25,23 +42,6 @@
             ],
             "date_published": "2021-03-03T21:39:04+08:00",
             "date_modified": "2021-03-05T08:16:40+08:00"
-        },
-        {
-            "id": "https://tommysush.github.io/integrating-mapkit-with-swiftui-chu-tan.html",
-            "url": "https://tommysush.github.io/integrating-mapkit-with-swiftui-chu-tan.html",
-            "title": "Integrating MapKit with SwiftUI, 初探",
-            "summary": "想要在 app 裡加入 map 的功能時，必須使用 MapKit framework 底下的 MKMapView class（詳見 Apple 文件），其定義如下： // An embeddable map interface, similar to the one provided by the Maps application.class MKMapView : UIView由於 MKMapView 是一個 UIView，因此無法直接在 SwiftUI’s View 裡使用它，而是得透過 UIViewRepresentable 這個 wrapper（詳見 Apple 文件）來將它包裝成 SwiftUI 認得的 View。 // A&hellip;",
-            "content_html": "<p>想要在 app 裡加入 map 的功能時，必須使用 MapKit framework 底下的 <strong><em>MKMapView</em></strong> class（<a href=\"https://developer.apple.com/documentation/mapkit/mkmapview\">詳見 Apple 文件</a>），其定義如下：</p>\n<pre><code class=\"language-swift\">// An embeddable map interface, similar to the one provided by the Maps application.\n\nclass MKMapView : UIView</code></pre>\n<p>由於 MKMapView 是一個 UIView，因此無法直接在 SwiftUI’s View 裡使用它，而是得透過 <strong><em>UIViewRepresentable</em></strong> 這個 wrapper（<a href=\"https://developer.apple.com/documentation/swiftui/uiviewrepresentable\">詳見 Apple 文件</a>）來將它包裝成 SwiftUI 認得的 View。</p>\n<pre><code class=\"language-swift\">// A wrapper for a UIKit view that you use to integrate that view into your SwiftUI view hierarchy.\n\nprotocol UIViewRepresentable : View where Self.Body == Never</code></pre>\n<p>首先，開啟一個新的App專案，並在專案底下新增一個 SwiftUI View 檔案，取名為 “MapView”。</p>\n<ol>\n<li>由於會使用到 MapKit，因此在 import SwiftUI 的下一行將其導入。</li>\n<li>另外，讓創建的 MapView struct 遵循 UIViewRepresentable protocol。</li>\n</ol>\n<pre><code class=\"language-swift\">// MapView.swift\n\nimport SwiftUI\nimport MapKit\n\nstruct MapView: UIViewRepresentable {\n    // more code\n}</code></pre>\n<p>不過，Xcode 無法編譯以上程式碼，並會出現這樣的錯誤訊息：\n“<strong><em>Type ‘MapView’ does not conform to protocol ‘UIViewRepresentable’</em></strong>“。所以，接著必須在 “more code” 的位置插入兩個 function，分別是 <strong>makeUIView()</strong> 和 <strong>updateUIView()</strong>。</p>\n<pre><code class=\"language-swift\">struct MapView: UIViewRepresentable {\n    func makeUIView(context: Context) -&gt; MKMapView {\n        let mapView = MKMapView()\n        return mapView\n    }\n\n    func updateUIView(_ uiView: MKMapView, context: Context) {\n\n    }\n}</code></pre>\n<p>有一點要注意的是，我們在這兩個 function 的 context 參數中直接賦予值 “Context”，其實 Context 所代表的是 <strong>UIViewRepresentableContext&lt;MapView&gt;</strong> ，之所以能簡化為 Context，是因為在 UIViewRepresentable 裡有著這樣的定義（在 Xcode 裡按下 <strong>Cmd + Shift + O</strong>，查找 UIViewRepresentable ）。</p>\n<pre><code class=\"language-swift\">public protocol UIViewRepresentable : View where Self.Body == Never {\n    ...\n    typealias Context = UIViewRepresentableContext&lt;Self&gt;\n}</code></pre>\n<p>至此，我們已可將創建的 MapView 用於 SwiftUI View，讓我們的 app 出現 map 囉！</p>\n<pre><code class=\"language-swift\">// ContentView.swift\n\nimport SwiftUI\n\nstruct ContentView: View {\n    var body: some View {\n        MapView()\n            .edgesIgnoringSafeArea(.all)\n    }\n}</code></pre>\n",
-            "image": "https://tommysush.github.io/media/posts/9/henry-perks-BJXAxQ1L7dI-unsplash.jpg",
-            "author": {
-                "name": "PI of Lab3F"
-            },
-            "tags": [
-                   "Swift &amp; SwiftUI",
-                   "Self-Taught"
-            ],
-            "date_published": "2021-02-25T15:09:38+08:00",
-            "date_modified": "2021-03-05T09:03:32+08:00"
         },
         {
             "id": "https://tommysush.github.io/qian-tan-state-property-wrapper-in-swiftui.html",
