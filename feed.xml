@@ -3,7 +3,7 @@
     <title>Lab3F</title>
     <link href="https://tommysush.github.io/feed.xml" rel="self" />
     <link href="https://tommysush.github.io" />
-    <updated>2021-03-07T00:40:58+08:00</updated>
+    <updated>2021-03-07T00:47:46+08:00</updated>
     <author>
         <name>PI of Lab3F</name>
     </author>
@@ -19,7 +19,7 @@
             <category term="US Fixed Income"/>
             <category term="Asset Management"/>
 
-        <updated>2021-03-07T00:40:58+08:00</updated>
+        <updated>2021-03-07T00:47:46+08:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://tommysush.github.io/media/posts/17/blogging-guide-K5DY18hy5JQ-unsplash.jpg" alt="Photo by Blogging Guide on Unsplash" />
@@ -32,11 +32,11 @@
                 <h3>為何適度的通膨是必要的</h3>
 <p>我認為下面這段文字給了很好的說明，</p>
 <p class="p1">Central bankers and most other economists prefer a little inflation.<span style="color: #2dc26b;"><strong><em> It helps employers <span style="text-decoration: underline;">manage their wage bills</span>, <span style="text-decoration: underline;">makes debt servicing easier</span>, and <span style="text-decoration: underline;">allows interest rates to be set at levels that leave room for cuts in a downturn</span>.</em></strong></span></p>
-<p>當失業率持續下降，勞動市場越貼近<span style="color: #e03e2d;"><strong>"完全就業"</strong></span>，此時<span style="color: #e03e2d;"><strong>"勞動薪資成長率"</strong></span>就會跟著走升，這才是推動通貨膨脹的最強因素。而這也是聯準會最在意的。（👍推薦閱讀：<a href="https://www.bloomberg.com/news/articles/2021-01-21/inflation-rippling-through-markets-is-just-what-fed-wants-to-see">Inflation Rippling Through Markets Is Just What Fed Wants to See</a>）</p>
+<p>當失業率持續下降，勞動市場越貼近<span style="color: #e03e2d;"><strong>"完全就業"</strong></span>，此時<span style="color: #e03e2d;"><strong>"勞動薪資成長率"</strong></span>就會跟著走升，這才是推動通貨膨脹的最強因素。而這也是聯準會最在意的。（👍推薦閱讀：<a href="https://www.bloomberg.com/news/articles/2021-01-21/inflation-rippling-through-markets-is-just-what-fed-wants-to-see" target="_blank" rel="noopener noreferrer">Inflation Rippling Through Markets Is Just What Fed Wants to See</a>）</p>
 <hr>
 <h3>失業率、薪資成長率、物價指數 vs 聯邦基金利率</h3>
 <ul style="list-style-type: square;">
-<li>從圖１可以發現，聯準會對於勞動市場是否達到"完全就業"，似乎有著越來越保守的認定趨勢（亦即失業率目標越來越低）。因此，<strong><span style="color: #2dc26b;">現階段可藉由觀察失業率何時能降至５％以下，來預判聯準會可能啟動升息的時點</span></strong>。最新的２月份數據為 6.2％。（👍推薦閱讀：<a href="https://www.nytimes.com/2021/01/18/business/economy/full-unemployment-fiscal-policy.html">How Full Employment Became Washington’s Creed</a>）<br>
+<li>從圖１可以發現，聯準會對於勞動市場是否達到"完全就業"，似乎有著越來越保守的認定趨勢（亦即失業率目標越來越低）。因此，<strong><span style="color: #2dc26b;">現階段可藉由觀察失業率何時能降至５％以下，來預判聯準會可能啟動升息的時點</span></strong>。最新的２月份數據為 6.2％。（👍推薦閱讀：<a href="https://www.nytimes.com/2021/01/18/business/economy/full-unemployment-fiscal-policy.html" target="_blank" rel="noopener noreferrer">How Full Employment Became Washington’s Creed</a>）<br>
 <figure class="post__image post__image--wide" ><img loading="lazy" src="https://lh3.googleusercontent.com/TcaU0xQ-tnT2JyA2FeLMI-KYuDAv-j5shVSaG2XLL74gtZxKFfLIBwzwNjGvJ0j66056vddxEHcq14CBoN2Gzg3O5xVbiJOVAvIqUSqnQbxwCwwayx3p6Ab0zBAv756zdaSbvvbFrw=w1200" data-is-external-image="true"  alt="失業率 vs 聯邦利率" width="1200" height="690">
 <figcaption >圖１・失業率 vs 聯邦利率</figcaption>
 </figure>
@@ -73,7 +73,7 @@
 </li>
 </ul>
 <hr>
-<h6><span style="color: #7e8c8d;">[補充資料] 文章內的FRED 圖表連結</span></h6>
+<h6><span style="color: #7e8c8d;">[ 補充資料 ] 文章內的FRED 圖表連結</span></h6>
 <ul>
 <li><a href="https://fred.stlouisfed.org/graph/?g=BH2f" target="_blank" rel="noopener noreferrer">失業率、勞動薪資成長率、核心物價指數及聯邦利率</a></li>
 <li><a href="https://fred.stlouisfed.org/graph/?g=BH2B" target="_blank" rel="noopener noreferrer">通膨預期、核心物價指數及聯邦利率</a></li>
