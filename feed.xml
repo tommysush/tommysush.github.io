@@ -3,12 +3,72 @@
     <title>Lab3F</title>
     <link href="https://tommysush.github.io/feed.xml" rel="self" />
     <link href="https://tommysush.github.io" />
-    <updated>2021-03-07T11:14:01+08:00</updated>
+    <updated>2021-03-08T16:34:53+08:00</updated>
     <author>
         <name>PI of Lab3F</name>
     </author>
     <id>https://tommysush.github.io</id>
 
+    <entry>
+        <title>如何讓 Publii 的 code block 顯示 syntax highlight </title>
+        <author>
+            <name>PI of Lab3F</name>
+        </author>
+        <link href="https://tommysush.github.io/test.html"/>
+        <id>https://tommysush.github.io/test.html</id>
+            <category term="Self-Taught"/>
+            <category term="Build Website"/>
+
+        <updated>2021-03-08T16:34:03+08:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://tommysush.github.io/media/posts/18/christopher-robin-ebbinghaus-pgSkeh0yl8o-unsplash.jpg" alt="Photo by Christopher Robin Ebbinghaus on Unsplash" />
+                    同樣使用 Publii 作為網站開發工具的各位，是否也被「程式碼區塊無法顯示語法色彩」的問題所困擾呢。其實官方網站上有提供了解決方案（網址連結在文末），以下就為各位詳細解說步驟： /* 利用 prism.js 和 prism.css 完成 syntax highlight */ code[class * =language-], pre[class * =language-] { ::placeholder { color: var(--placeholder); opacity: 1; } }經過以上的步驟，我們已經完成 code block 的 syntax highlight 。現在，你可以試著重新預覽使用 Publii 所建構的網頁，相信你的程式碼區塊現在也變得容易閱讀了。😁Publii 官方解決方案：Highlight your code syntax with PrismJS（請自段落 "How can Prism.js be&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <img src="https://tommysush.github.io/media/posts/18/christopher-robin-ebbinghaus-pgSkeh0yl8o-unsplash.jpg" alt="Photo by Christopher Robin Ebbinghaus on Unsplash" />
+                <p>同樣使用 Publii 作為網站開發工具的各位，是否也被「程式碼區塊無法顯示語法色彩」的問題所困擾呢。其實官方網站上有提供了解決方案（網址連結在文末），以下就為各位詳細解說步驟：</p>
+<ol>
+<li>請到 <strong>PrismJS</strong> 的<a href="https://prismjs.com/download.html#themes=prism-okaidia&amp;languages=markup+css+clike+javascript" target="_blank" rel="noopener noreferrer">官方網站</a>，按下上方極為顯眼的 "<span style="color: #2dc26b;"><strong>DOWNLOAD</strong></span>" 鈕。然後在網頁中依序<strong>選取</strong>自己喜歡的 "<strong>Themes</strong>"、並<strong>勾選</strong>需要使用的 "<strong>Languages</strong>" 和 "<strong>Plugins</strong>"，最後捲動到網頁最下方，並分別點按 "<span style="color: #2dc26b;"><strong>DOWNLOAD JS</strong></span>" 和 "<span style="color: #2dc26b;"><strong>DOWNLOAD CSS</strong></span>" 來完成檔案的下載。</li>
+<li>將下載到電腦上的 "<span style="color: #3598db;"><strong>prism.js</strong></span>" 和 "<span style="color: #3598db;"><strong>prism.css</strong></span>" 分別複製到以下路徑的資料夾中。（以下路徑為 Mac 上的，Windows 使用者請自行尋找對應資料夾）<br>
+<ul style="list-style-type: square;">
+<li>文件 / Publii / sites / your-site-name / input / themes / your-theme / assets / <span style="color: #3598db;"><strong>js</strong></span></li>
+<li>文件 / Publii / sites / your-site-name / input / themes / your-theme / assets / <span style="color: #3598db;"><strong>css</strong></span></li>
+</ul>
+</li>
+<li>到 "<strong>文件 / Publii / sites / your-site-name / input / themes / your-theme / partials</strong>" 資料夾底下，分別開啟以下檔案、並且插入所需的程式碼。
+<ul style="list-style-type: square;">
+<li>開啟 "<span style="color: #3598db;"><strong>head.hbs</strong></span>"，捲動到檔案末端在<code>&lt;/head&gt;</code>之前插入以下這段程式碼，
+<div>
+<div><code>&lt;link rel="stylesheet" href="{{css "prism.css" }}</code>。</div>
+</div>
+</li>
+<li>開啟 "<span style="color: #3598db;"><strong>footer.hbs</strong></span>"，捲動到檔案末端在<code>&lt;/body&gt;</code>之前插入以下這段程式碼，
+<div>
+<div>
+<div>
+<div><code>&lt;script defer src="{{js "prism.js"}}"&gt;&lt;/script&gt;</code>。</div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</li>
+<li>最後，回到 Publii 程式畫面，點選工具列的 "Tools"，再點選 "custom CSS"，然後在 "normal" 頁次裡插入以下程式碼。</li>
+</ol>
+<pre class="language-css">/* 利用 prism.js 和 prism.css 完成 syntax highlight */<br>code[class * =language-], pre[class * =language-] {<br>  ::placeholder {<br>    color: var(--placeholder);<br>    opacity: 1;<br>  }<br>}</pre>
+<p>經過以上的步驟，我們已經完成 code block 的 syntax highlight 。現在，你可以試著重新預覽使用 <span style="color: #3598db;"><strong>Publii</strong></span> 所建構的網頁，相信你的程式碼區塊現在也變得容易閱讀了。😁</p>
+<h6>Publii 官方解決方案：</h6>
+<ul style="list-style-type: square;">
+<li><a href="https://getpublii.com/docs/highlight-your-code-syntax-with-prism-js.html" target="_blank" rel="noopener noreferrer">Highlight your code syntax with PrismJS</a>（請自段落 "How can Prism.js be implemented in a theme without built-in support for it" 閱讀起）</li>
+<li><span style="color: #e03e2d;"><strong>注意</strong></span>！一旦使用者 <strong>"<span style="color: #e03e2d;">變換</span>"</strong> 或 <strong>"<span style="color: #e03e2d;">更新(update)</span>"</strong> 佈景主題（theme），<span style="color: #e03e2d;"><strong>原本的 syntax hightlight 就會失效</strong></span>，必須根據上述的方法再重新操作一次。</li>
+<li><span style="color: #3598db;"><strong>補充</strong></span>：若是想調整程式碼區塊所使用的字體大小，可以到 "prism.css" 裡修改諸如<code>font-size</code>、<code>line-height</code>等屬性值。</li>
+</ul>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>美國利率趨勢觀察, 2021年3月</title>
         <author>
@@ -837,7 +897,7 @@ struct ContentView: View {
             <category term="Swift &amp; SwiftUI"/>
             <category term="Self-Taught"/>
 
-        <updated>2021-02-21T15:40:43+08:00</updated>
+        <updated>2021-03-08T14:44:11+08:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://tommysush.github.io/media/posts/6/joshua-reddekopp-SyYmXSDnJ54-unsplash.jpg" alt="Photo by Joshua Reddekopp on Unsplash" />
@@ -858,7 +918,7 @@ struct ContentView: View {
     }
 }</code></pre>
 <p>根據 SwiftUI 的定義，<code>@State</code> property wrapper 實際上是一個 struct，而存入的值其實是放置在名為 <strong>wrappedValue</strong> 的變數中。</p>
-<pre><code class="language-siwft">@propertyWrapper public struct State&lt;Value&gt; : DynamicProperty {
+<pre><code class="language-swift">@propertyWrapper public struct State&lt;Value&gt; : DynamicProperty {
     ...
     public var wrappedValue: Value { get nonmutating set }
 }</code></pre>
@@ -869,7 +929,7 @@ struct ContentView: View {
     public init(get: @escaping () -&gt; Value, set: @escaping (Value) -&gt; Void)
 }</code></pre>
 <p>做法是在原先的 view 或 controller 底下加入一個 Binding 變數，然後在 getter 中將 State 變數指定給它，而在 setter 中則是將 newValue（亦可用 shortcut <code>$0</code>）設定給 Binding 變數。最後，只要將原先 view 或 controller 底下的替換掉即可。範例如下：</p>
-<pre><code class="language-siwft">struct ContenView: View {
+<pre><code class="language-swift">struct ContenView: View {
     @State private var fontSize: CGFloat = 35
 
     var body: some View {
@@ -903,8 +963,9 @@ struct ContentView: View {
         <link href="https://tommysush.github.io/ce-shigoogle-photo-zuo-wei-tu-ceng.html"/>
         <id>https://tommysush.github.io/ce-shigoogle-photo-zuo-wei-tu-ceng.html</id>
             <category term="Self-Taught"/>
+            <category term="Build Website"/>
 
-        <updated>2021-02-21T15:40:30+08:00</updated>
+        <updated>2021-03-08T16:34:53+08:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://tommysush.github.io/media/posts/2/rajeshwar-bachu-K4txLik7pnY-unsplash.jpg" alt="Photo by Rajeshwar Bachu on Unsplash" />
