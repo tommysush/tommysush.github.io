@@ -3,7 +3,7 @@
     <title>Lab3F</title>
     <link href="https://tommysush.github.io/feed.xml" rel="self" />
     <link href="https://tommysush.github.io" />
-    <updated>2021-03-08T16:37:06+08:00</updated>
+    <updated>2021-03-08T21:30:54+08:00</updated>
     <author>
         <name>PI of Lab3F</name>
     </author>
@@ -14,38 +14,38 @@
         <author>
             <name>PI of Lab3F</name>
         </author>
-        <link href="https://tommysush.github.io/test.html"/>
-        <id>https://tommysush.github.io/test.html</id>
+        <link href="https://tommysush.github.io/syntax-highlight-in-publii.html"/>
+        <id>https://tommysush.github.io/syntax-highlight-in-publii.html</id>
             <category term="Self-Taught"/>
             <category term="Build Website"/>
 
-        <updated>2021-03-08T16:34:03+08:00</updated>
+        <updated>2021-03-08T20:15:51+08:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://tommysush.github.io/media/posts/18/christopher-robin-ebbinghaus-pgSkeh0yl8o-unsplash.jpg" alt="Photo by Christopher Robin Ebbinghaus on Unsplash" />
-                    同樣使用 Publii 作為網站開發工具的各位，是否也被「程式碼區塊無法顯示語法色彩」的問題所困擾呢。其實官方網站上有提供了解決方案（網址連結在文末），以下就為各位詳細解說步驟： /* 利用 prism.js 和 prism.css 完成 syntax highlight */ code[class * =language-], pre[class * =language-] { ::placeholder { color: var(--placeholder); opacity: 1; } }經過以上的步驟，我們已經完成 code block 的 syntax highlight 。現在，你可以試著重新預覽使用 Publii 所建構的網頁，相信你的程式碼區塊現在也變得容易閱讀了。😁Publii 官方解決方案：Highlight your code syntax with PrismJS（請自段落 "How can Prism.js be&hellip;
+                    同樣使用 Publii 作為網站開發工具的各位，是否也被 程式碼區塊無法顯示語法色彩 的問題所困擾呢（筆者是在網頁預覽時發生無法顯示的問題，編輯器環境則正常）。其實，在 Publii 官方網站上有提供解決方案（網址連結在文末），以下就為各位詳細解說步驟： code[class * =language-], pre[class * =language-] { ::placeholder { color: var(--placeholder); opacity: 1; } }經過以上的步驟，我們已經完成 code block 的 syntax highlight 。現在，你可以試著重新預覽使用 Publii 所建構的網頁，相信你的程式碼區塊現在也變得容易閱讀了。😁 補充：若讀者想調整程式碼區塊所使用的字體大小、行距等等，可到 "prism.css" 裡修改像是font-size、line-height等等的屬性值。Publii 官方解決方案：Highlight your code syntax with PrismJS（請自段落 "How can Prism.js be implemented in&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
                     <img src="https://tommysush.github.io/media/posts/18/christopher-robin-ebbinghaus-pgSkeh0yl8o-unsplash.jpg" alt="Photo by Christopher Robin Ebbinghaus on Unsplash" />
-                <p>同樣使用 Publii 作為網站開發工具的各位，是否也被「程式碼區塊無法顯示語法色彩」的問題所困擾呢。其實官方網站上有提供了解決方案（網址連結在文末），以下就為各位詳細解說步驟：</p>
+                <p>同樣使用 <strong>Publii</strong> 作為網站開發工具的各位，是否也被 <span style="color: #2dc26b;"><strong>程式碼區塊無法顯示語法色彩</strong></span> 的問題所困擾呢（<span style="color: #2dc26b;"><strong>筆者是在網頁預覽時發生無法顯示的問題，編輯器環境則正常</strong></span>）。其實，在 Publii 官方網站上有提供解決方案（網址連結在文末），以下就為各位詳細解說步驟：</p>
 <ol>
-<li>請到 <strong>PrismJS</strong> 的<a href="https://prismjs.com/download.html#themes=prism-okaidia&amp;languages=markup+css+clike+javascript" target="_blank" rel="noopener noreferrer">官方網站</a>，按下上方極為顯眼的 "<span style="color: #2dc26b;"><strong>DOWNLOAD</strong></span>" 鈕。然後在網頁中依序<strong>選取</strong>自己喜歡的 "<strong>Themes</strong>"、並<strong>勾選</strong>需要使用的 "<strong>Languages</strong>" 和 "<strong>Plugins</strong>"，最後捲動到網頁最下方，並分別點按 "<span style="color: #2dc26b;"><strong>DOWNLOAD JS</strong></span>" 和 "<span style="color: #2dc26b;"><strong>DOWNLOAD CSS</strong></span>" 來完成檔案的下載。</li>
-<li>將下載到電腦上的 "<span style="color: #3598db;"><strong>prism.js</strong></span>" 和 "<span style="color: #3598db;"><strong>prism.css</strong></span>" 分別複製到以下路徑的資料夾中。（以下路徑為 Mac 上的，Windows 使用者請自行尋找對應資料夾）<br>
+<li>請到 <strong>PrismJS</strong> 的<a href="https://prismjs.com/download.html#themes=prism-okaidia&amp;languages=markup+css+clike+javascript" target="_blank" rel="noopener noreferrer">官方網站</a>，按下上方極為顯眼的 "<strong><span style="color: #3598db;">DOWNLOAD</span></strong>" 鈕。然後在網頁中依序選取自己喜歡的 "<strong><span style="color: #3598db;">Themes</span></strong>"、並勾選需要使用的 "<strong><span style="color: #3598db;">Languages</span></strong>" 和 "<strong><span style="color: #3598db;">Plugins</span></strong>"，最後捲動到網頁最下方，並分別點按 "<span style="color: #3598db;"><strong>DOWNLOAD JS</strong></span>" 和 "<span style="color: #3598db;"><strong>DOWNLOAD CSS</strong></span>" 來完成檔案的下載。</li>
+<li>將下載到電腦上的 "<span style="color: #3598db;"><strong>prism.js</strong></span>" 和 "<span style="color: #3598db;"><strong>prism.css</strong></span>" 分別複製到以下路徑的資料夾中。（以下路徑為 <strong>Mac</strong> 上的，<strong>Windows</strong> 使用者請自行尋找對應資料夾）<br>
 <ul style="list-style-type: square;">
-<li>文件 / Publii / sites / your-site-name / input / themes / your-theme / assets / <span style="color: #3598db;"><strong>js</strong></span></li>
-<li>文件 / Publii / sites / your-site-name / input / themes / your-theme / assets / <span style="color: #3598db;"><strong>css</strong></span></li>
+<li>檔案 "<span style="color: #3598db;"><strong>prism.js</strong></span>" 貼至 "<span style="color: #3598db;">文件/Publii/sites/your-site-name/input/ themes/your-theme/assets/<strong><span style="color: #3598db;">js</span>"</strong></span></li>
+<li>檔案 "<span style="color: #3598db;"><strong>prism.css</strong></span>" 貼至 "<span style="color: #3598db;">文件/Publii/sites/your-site-name/input/themes/your-theme/assets/<strong>css"</strong></span></li>
 </ul>
 </li>
-<li>到 "<strong>文件 / Publii / sites / your-site-name / input / themes / your-theme / partials</strong>" 資料夾底下，分別開啟以下檔案、並且插入所需的程式碼。
+<li>到 "<span style="color: #3598db;">文件/Publii/sites/your-site-name/input/themes/your-theme/<strong>partials</strong></span>" 資料夾底下，分別開啟以下檔案、並且插入所需的程式碼。
 <ul style="list-style-type: square;">
-<li>開啟 "<span style="color: #3598db;"><strong>head.hbs</strong></span>"，捲動到檔案末端在<code>&lt;/head&gt;</code>之前插入以下這段程式碼，
+<li>開啟 "<span style="color: #3598db;"><strong>head.hbs</strong></span>"，捲動到檔案末端在<code>&lt;/head&gt;</code>之前插入以下程式碼，
 <div>
 <div><code>&lt;link rel="stylesheet" href="{{css "prism.css" }}</code>。</div>
 </div>
 </li>
-<li>開啟 "<span style="color: #3598db;"><strong>footer.hbs</strong></span>"，捲動到檔案末端在<code>&lt;/body&gt;</code>之前插入以下這段程式碼，
+<li>開啟 "<span style="color: #3598db;"><strong>footer.hbs</strong></span>"，捲動到檔案末端在<code>&lt;/body&gt;</code>之前插入以下程式碼，
 <div>
 <div>
 <div>
@@ -56,15 +56,16 @@
 </li>
 </ul>
 </li>
-<li>最後，回到 Publii 程式畫面，點選工具列的 "Tools"，再點選 "custom CSS"，然後在 "normal" 頁次裡插入以下程式碼。</li>
+<li>最後，回到 <strong>Publii</strong> 程式的主畫面，點選工具列的 "<span style="color: #3598db;"><strong>Tools</strong></span>"，再點選 "<span style="color: #3598db;"><strong>Custom CSS</strong></span>"，然後在 "<span style="color: #3598db;"><strong>normal</strong></span>" 頁次裡插入以下程式碼。</li>
 </ol>
-<pre class="language-css">/* 利用 prism.js 和 prism.css 完成 syntax highlight */<br>code[class * =language-], pre[class * =language-] {<br>  ::placeholder {<br>    color: var(--placeholder);<br>    opacity: 1;<br>  }<br>}</pre>
-<p>經過以上的步驟，我們已經完成 code block 的 syntax highlight 。現在，你可以試著重新預覽使用 <span style="color: #3598db;"><strong>Publii</strong></span> 所建構的網頁，相信你的程式碼區塊現在也變得容易閱讀了。😁</p>
+<pre class="language-css">code[class * =language-], pre[class * =language-] {<br>  ::placeholder {<br>    color: var(--placeholder);<br>    opacity: 1;<br>  }<br>}</pre>
+<p>經過以上的步驟，我們已經完成 code block 的 syntax highlight 。現在，你可以試著重新預覽使用 <strong>Publii</strong> 所建構的網頁，相信你的程式碼區塊現在也變得容易閱讀了。😁</p>
+<p>補充：若讀者想調整程式碼區塊所使用的<span style="color: #2dc26b;"><strong>字體大小</strong></span>、<span style="color: #2dc26b;"><strong>行距</strong></span>等等，可到 "<span style="color: #3598db;"><strong>prism.css</strong></span>" 裡修改像是<code>font-size</code>、<code>line-height</code>等等的屬性值。</p>
+<hr>
 <h6>Publii 官方解決方案：</h6>
 <ul style="list-style-type: square;">
 <li><a href="https://getpublii.com/docs/highlight-your-code-syntax-with-prism-js.html" target="_blank" rel="noopener noreferrer">Highlight your code syntax with PrismJS</a>（請自段落 "How can Prism.js be implemented in a theme without built-in support for it" 閱讀起）</li>
-<li><span style="color: #e03e2d;"><strong>注意</strong></span>！一旦使用者 <strong>"<span style="color: #e03e2d;">變換</span>"</strong> 或 <strong>"<span style="color: #e03e2d;">更新(update)</span>"</strong> 佈景主題（theme），<span style="color: #e03e2d;"><strong>原本的 syntax hightlight 就會失效</strong></span>，必須根據上述的方法再重新操作一次。</li>
-<li><span style="color: #3598db;"><strong>補充</strong></span>：若是想調整程式碼區塊所使用的字體大小，可以到 "prism.css" 裡修改諸如<code>font-size</code>、<code>line-height</code>等屬性值。</li>
+<li><span style="color: #e03e2d;"><strong>注意！一旦使用者 "變換" 或 "更新(update)" 佈景主題（theme），原本的 syntax hightlight 就會失效</strong></span>，必須根據上述的方法再重新操作一次。</li>
 </ul>
             ]]>
         </content>
@@ -79,11 +80,11 @@
             <category term="US Fixed Income"/>
             <category term="Asset Management"/>
 
-        <updated>2021-03-07T11:14:01+08:00</updated>
+        <updated>2021-03-08T20:15:29+08:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://tommysush.github.io/media/posts/17/blogging-guide-K5DY18hy5JQ-unsplash.jpg" alt="Photo by Blogging Guide on Unsplash" />
-                    為何適度的通膨是必要的我認為下面這段文字給了很好的說明， Central bankers and most other economists prefer a little inflation. It helps employers manage their wage bills, makes debt servicing easier, and allows interest rates to be set at levels that leave room for cuts in a downturn. 當失業率持續下降，勞動市場越貼近"完全就業"，此時"勞動薪資成長率"就會跟著走升，這才是推動通貨膨脹的最強因素。而這也是聯準會最在意的。（👍推薦閱讀：Inflation Rippling Through Markets Is Just&hellip;
+                    為何適度的通膨是必要的我認為下面這段文字給了很好的說明， Central bankers and most other economists prefer a little inflation. It helps employers manage their wage bills, makes debt servicing easier, and allows interest rates to be set at levels that leave room for cuts in a downturn. 當失業率持續下降，勞動市場越貼近完全就業，此時勞動薪資成長率就會跟著走升，這才是推動通貨膨脹的最強因素。而這也是聯準會最在意的。（👍推薦閱讀：Inflation Rippling Through Markets Is Just&hellip;
                 ]]>
             </summary>
         <content type="html">
@@ -91,12 +92,12 @@
                     <img src="https://tommysush.github.io/media/posts/17/blogging-guide-K5DY18hy5JQ-unsplash.jpg" alt="Photo by Blogging Guide on Unsplash" />
                 <h3>為何適度的通膨是必要的</h3>
 <p>我認為下面這段文字給了很好的說明，</p>
-<p class="p1">Central bankers and most other economists prefer a little inflation.<span style="color: #2dc26b;"><strong><em> It helps employers <span style="text-decoration: underline;">manage their wage bills</span>, <span style="text-decoration: underline;">makes debt servicing easier</span>, and <span style="text-decoration: underline;">allows interest rates to be set at levels that leave room for cuts in a downturn</span>.</em></strong></span></p>
-<p>當失業率持續下降，勞動市場越貼近<span style="color: #e03e2d;"><strong>"完全就業"</strong></span>，此時<span style="color: #e03e2d;"><strong>"勞動薪資成長率"</strong></span>就會跟著走升，這才是推動通貨膨脹的最強因素。而這也是聯準會最在意的。（👍推薦閱讀：<a href="https://www.bloomberg.com/news/articles/2021-01-21/inflation-rippling-through-markets-is-just-what-fed-wants-to-see" target="_blank" rel="noopener noreferrer">Inflation Rippling Through Markets Is Just What Fed Wants to See</a>）</p>
+<p class="p1">Central bankers and most other economists prefer a little inflation.<span style="color: #2dc26b;"><strong> It helps employers <span style="text-decoration: underline;">manage their wage bills</span>, <span style="text-decoration: underline;">makes debt servicing easier</span>, and <span style="text-decoration: underline;">allows interest rates to be set at levels that leave room for cuts in a downturn</span>.</strong></span></p>
+<p>當失業率持續下降，勞動市場越貼近<span style="color: #2dc26b;"><strong>完全就業</strong></span>，此時<span style="color: #2dc26b;"><strong>勞動薪資成長率</strong></span>就會跟著走升，這才是推動通貨膨脹的最強因素。而這也是聯準會最在意的。（👍推薦閱讀：<a href="https://www.bloomberg.com/news/articles/2021-01-21/inflation-rippling-through-markets-is-just-what-fed-wants-to-see" target="_blank" rel="noopener noreferrer">Inflation Rippling Through Markets Is Just What Fed Wants to See</a>）</p>
 <hr>
 <h3>失業率、薪資成長率、物價指數 vs 聯邦基金利率</h3>
 <ul style="list-style-type: square;">
-<li>從圖１可以發現，聯準會對於勞動市場是否達到"完全就業"，似乎有著越來越保守的認定趨勢（亦即失業率目標越來越低）。因此，<strong><span style="color: #2dc26b;">現階段可藉由觀察失業率何時能降至５％以下，來預判聯準會可能啟動升息的時點</span></strong>。最新的２月份數據為 6.2％。（👍推薦閱讀：<a href="https://www.nytimes.com/2021/01/18/business/economy/full-unemployment-fiscal-policy.html" target="_blank" rel="noopener noreferrer">How Full Employment Became Washington’s Creed</a>）</li>
+<li>從圖１可以發現，聯準會對於勞動市場是否達到完全就業，似乎有著越來越保守的認定趨勢（亦即失業率目標越來越低）。因此，<strong><span style="color: #2dc26b;">現階段可藉由觀察失業率何時能降至５％以下，來預判聯準會可能啟動升息的時點</span></strong>。最新的２月份數據為 6.2％。（👍推薦閱讀：<a href="https://www.nytimes.com/2021/01/18/business/economy/full-unemployment-fiscal-policy.html" target="_blank" rel="noopener noreferrer">How Full Employment Became Washington’s Creed</a>）</li>
 </ul>
 <figure class="post__image post__image--wide" ><img loading="lazy" src="https://lh3.googleusercontent.com/TcaU0xQ-tnT2JyA2FeLMI-KYuDAv-j5shVSaG2XLL74gtZxKFfLIBwzwNjGvJ0j66056vddxEHcq14CBoN2Gzg3O5xVbiJOVAvIqUSqnQbxwCwwayx3p6Ab0zBAv756zdaSbvvbFrw=w1200" data-is-external-image="true"  alt="失業率 vs 聯邦利率" width="1200" height="690">
 <figcaption >圖１・失業率 vs 聯邦利率</figcaption>
@@ -114,11 +115,11 @@
 <figcaption >圖３・核心物價指數 vs 聯邦利率</figcaption>
 </figure>
 <ul style="list-style-type: square;">
-<li>結論：<span style="color: #e03e2d;"><strong>綜合以上因素來看，現階段要談聯準會升息似乎仍然為之過早了些</strong></span>。</li>
+<li>結論：<span style="color: #e03e2d;"><strong>綜合以上因素來看，現階段要談聯準會何時升息似乎還為之過早</strong></span>。</li>
 </ul>
 <hr>
 <h3>市場對於通膨的共識為何</h3>
-<p>習慣上，市場會以抗通膨債券（Treasury Inflation-Protected Securities, TIPS）和美國公債的殖利率差異作為通膨的預期值（亦被稱作 "Breakeven Inflation Rate"）。從圖４可以看出，<span style="color: #2dc26b;"><strong>現階段市場對於通膨的預期雖然來到相對高的位置</strong></span>（3月4日數據：５年期 2.43％、10年期 2.20％），<span style="color: #2dc26b;"><strong>但與過去長時間相比並沒有太特別之處</strong></span>。而且，<strong><span style="color: #2dc26b;">發生短期（5年期）過度反應而高於長期（10年期）時，通常之後很快就會拉回修正</span></strong>。</p>
+<p>習慣上，市場會以<strong>抗通膨債券</strong>（Treasury Inflation-Protected Securities, TIPS）和<strong>美國公債</strong>的殖利率差異作為通膨的預期值（亦被稱作 "Breakeven Inflation Rate"）。從圖４可以看出，<span style="color: #2dc26b;"><strong>現階段市場對於通膨的預期雖然來到相對高的位置</strong></span>（3月4日數據：５年期 2.43％、10年期 2.20％），<span style="color: #2dc26b;"><strong>但與過去長時間相比並沒有太特別之處</strong></span>。而且，<strong><span style="color: #2dc26b;">發生短期（5年期）過度反應而高於長期（10年期）時，通常之後很快就會拉回修正</span></strong>。</p>
 <figure class="post__image post__image--wide" ><img loading="lazy" src="https://lh3.googleusercontent.com/8lEguyJRwnIddCxseZK-glRBgxwWiC_blj9KqBSVzScUtFC-y5PgTahzix_oFSRfRFKugZENsqGDTY9ZOgKH7g2TBBje4fVOvk1xOfvam7NnSHNq8SFuecDr-pvuZvfYGySvM7qRyg=w1200" data-is-external-image="true"  alt="市場對於通膨的預期" width="1200" height="690">
 <figcaption >圖４・市場對於通膨的預期</figcaption>
 </figure>
@@ -154,11 +155,11 @@
             <category term="Swift &amp; SwiftUI"/>
             <category term="Self-Taught"/>
 
-        <updated>2021-03-08T16:37:06+08:00</updated>
+        <updated>2021-03-08T20:56:04+08:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://tommysush.github.io/media/posts/16/henry-perks-BJXAxQ1L7dI-unsplash.jpg" alt="Photo by henry perks on Unsplash" />
-                     前文提到如何利用 UIViewRepresentable wrapper 將 MapKit 的 MKMapView 加入 SwiftUI View。我們成功地為 app 加入 map，但也僅止於此。當我們移動或扭轉 map 時，其改變的展示區域（region）及中心點（centerCoordinate）等資訊，並沒有從 SwiftUI View 傳遞給 MapView，這是因為由 UIViewRepresentable 包裹而成的 MapView struct 裡缺少了負責傳遞資訊的 Coordinator。 public protocol UIViewRepresentable : View where Self.Body == Never { ... /// Implement this method if changes to your&hellip;
+                     前文中提到我們如何利用UIViewRepresentable&nbsp;wrapper 將 MapKit 的MKMapView加入 SwiftUI 的View。雖然我們成功地為 app 加入 map，但也僅止於此。當我們移動或扭轉 map 時，其改變的展示區域（region）及中心點（centerCoordinate）等資訊，並沒有從 SwiftUI View 傳遞給 MapView，這是因為由UIViewRepresentable包裹而成的 MapView struct 裡缺少了負責傳遞資訊的Coordinator。 public protocol UIViewRepresentable : View where Self.Body == Never { ... /// Implement this method if changes to your view might affect other /// parts of&hellip;
                 ]]>
             </summary>
         <content type="html">
@@ -166,7 +167,7 @@
                     <img src="https://tommysush.github.io/media/posts/16/henry-perks-BJXAxQ1L7dI-unsplash.jpg" alt="Photo by henry perks on Unsplash" />
                 
   <p>
-    <a href="https://tommysush.github.io/integrating-mapkit-with-swiftui-chu-tan-3.html" target="_blank">前文</a>提到如何利用 <code>UIViewRepresentable</code> wrapper 將 MapKit 的 <code>MKMapView</code> 加入 SwiftUI View。我們成功地為 app 加入 map，但也<em>僅止於此</em>。當我們移動或扭轉 map 時，其改變的展示區域（region）及中心點（centerCoordinate）等資訊，並沒有從 SwiftUI View 傳遞給 MapView，這是因為由 <code>UIViewRepresentable</code> 包裹而成的 MapView struct 裡缺少了負責傳遞資訊的 <code>Coordinator</code>。
+    前文中提到我們如何利用<code>UIViewRepresentable</code>&nbsp;wrapper 將 <strong>MapKit</strong> 的<code>MKMapView</code>加入 <strong>SwiftUI</strong> 的<code>View</code>。雖然我們成功地為 app 加入 map，但也僅止於此。當我們移動或扭轉 map 時，其改變的展示區域（region）及中心點（centerCoordinate）等資訊，並沒有從 SwiftUI View 傳遞給 MapView，這是因為由<code>UIViewRepresentable</code>包裹而成的 MapView struct 裡缺少了負責傳遞資訊的<code>Coordinator</code>。
   </p>
 <pre class="line-numbers  language-swift"><code>public protocol UIViewRepresentable : View where Self.Body == Never {
     ...
@@ -182,11 +183,11 @@
 }</code></pre>
 
   <p>
-    從上方的官方說明可知，需自定一個 <code>Coordinator</code>，並利用 <code>makeCoordinator()</code> 來產生其實例，此實例就可作為 MapView 和 SwiftUI View&nbsp;的溝通橋樑。接著，按步驟在 MapView struct 裡添加程式碼。
+    從上方的官方說明可知，需自定一個<code>Coordinator</code>，並利用<code>makeCoordinator()</code>來產生其實例，此實例就可作為 MapView 和 SwiftUI View&nbsp;的溝通橋樑。接著，按步驟在 MapView struct 裡添加程式碼。
   </p>
 
   <ol>
-    <li>創建自定的 <code>Coordinator</code> class，需繼承 <code>NSObject</code>、並且遵循 <code>MKMapViewDelegate</code>&nbsp;protocol。（<a href="https://developer.apple.com/documentation/mapkit/mkmapviewdelegate" target="_blank">詳見官方文件</a>）</li><li>在 class 裡必須告訴它<em><strong>隸屬於誰之下</strong></em>（who's its parent），此例中 parent 即是 MapView。</li><li>接著，利用 <code>makeCoordinator()</code> 來產生它的實例。</li><li>最後，則是在 <code>makeUIView()</code> 裡插入 <code>mapView.delegate = context.coordinator</code>。</li>
+    <li>首先，創建自定的 Coordinator class，除了繼承<code>NSObject</code>之外，還必須同時遵循<code>MKMapViewDelegate</code>&nbsp;protocol。（<a href="https://developer.apple.com/documentation/mapkit/mkmapviewdelegate" target="_blank">詳見官方文件</a>）</li><li>然後在 class 裡告訴它<strong>隸屬於誰之下</strong>（who's its parent，此例中即為 MapView）。</li><li>接著，利用<code>makeCoordinator()</code>來產生它的實例。</li><li>最後，則是在<code>makeUIView()</code>裡插入<code>mapView.delegate = context.coordinator</code>。</li>
   </ol>
 <pre class="line-numbers  language-swift"><code>// MapView.swift
 
@@ -229,7 +230,7 @@ struct MapView: UIViewRepresentable {
   </p>
 
   <ol>
-    <li>分別在 MapView 和 SwiftUI View 裡添加 property 用來存放位置座標，其中 MapView 的是 <em><strong>binding property</strong></em>，用來跟 SwiftUI View 裡的綁定，以<em><strong>確保資料的同步</strong></em>。</li><li>在自定的 <code>Coordinator</code> 裡，完成 <code>mapViewDidChangeVisibleRegion(MKMapView)</code> 的實作。如此一來，當使用者移動地圖時，便會透過這個方法來完成要執行的動作。<br></li><li>最後，由於 MapView 多了新的 <code>centerCoordinate</code>&nbsp;property，別忘了在 SwiftUI View 裡的 <code>MapView()</code>&nbsp;引入參數，並記得加上 binding 的 <code>$</code> 符號。</li>
+    <li>分別在 MapView 和 SwiftUI View 裡添加 property 用來存放位置座標，其中 MapView 的是 <strong>binding property</strong>，用來跟 SwiftUI View 裡的綁定，以<strong>確保資料的同步</strong>。</li><li>在自定的 Coordinator 裡，完成<code>mapViewDidChangeVisibleRegion(MKMapView)</code>的實作。如此一來，當使用者移動地圖時，便會透過這個方法來完成要執行的動作。<br></li><li>最後，由於 MapView 多了新的<code>centerCoordinate</code>&nbsp;property，別忘了在 SwiftUI View 裡的<code>MapView()</code>引入參數，並記得加上 binding 的<code>$</code>符號。</li>
   </ol>
 <pre class="line-numbers  language-swift"><code>// MapView.swift
 
@@ -270,12 +271,17 @@ struct ContentView: View {
 }</code></pre>
 
   <p>
-    完成以上步驟之後，當我們再次拖拉或扭轉地圖時，SwiftUI View 便會將變動的狀態透過 Coordinator 傳遞給 MapView，各位不妨在&nbsp;<code>mapViewDidChangeVisibleRegion()</code> 和 <code>updateUIView()</code> 裡分別加上 <code>print("center at: \(parent.centerCoordinate)")</code> 和 <code>print("center at: \(centerCoordinate)")</code>，這樣就能在 Xcode 裡直接觀察到其變化。
+    完成以上步驟之後，當我們再次拖拉或扭轉地圖時，SwiftUI View 便會將變動的狀態透過 Coordinator 傳遞給 MapView，各位不妨在<code>mapViewDidChangeVisibleRegion()</code>和<code>updateUIView()</code>裡分別加上<code>print("center at: \(parent.centerCoordinate)")</code>和<code>print("center at: \(centerCoordinate)")</code>，這樣就能在 Xcode 裡直接觀察到其變化。
   </p>
+<hr class="separator separator--dots" />
 
-  <p>
-    
-  </p>
+    <h6 id="---apple-developer-documentation">
+      [ 補充資料 ] Apple Developer Documentation
+    </h6>
+
+  <ul>
+    <li><a href="https://developer.apple.com/documentation/swiftui/uiviewrepresentable" target="_blank">SwiftUI &gt; Framework Integration &gt; Protocol UIViewRepresentable</a></li>
+  </ul>
             ]]>
         </content>
     </entry>
@@ -289,11 +295,11 @@ struct ContentView: View {
             <category term="Swift &amp; SwiftUI"/>
             <category term="Self-Taught"/>
 
-        <updated>2021-03-07T00:22:16+08:00</updated>
+        <updated>2021-03-08T21:06:28+08:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://tommysush.github.io/media/posts/15/henry-perks-BJXAxQ1L7dI-unsplash.jpg" alt="Photo by henry perks on Unsplash" />
-                     想要在 app 裡加入 map 的功能時，必須使用 MapKit framework 底下的 MKMapView class（詳見 Apple 文件），其定義如下： // An embeddable map interface, similar to the one provided by the Maps application.class MKMapView : UIView MKMapView 是一個 UIView，因此無法直接在 SwiftUI's View 裡使用它，而是得透過 UIViewRepresentable 這個 wrapper（詳見 Apple 文件）來將它包裝成 SwiftUI 認得的 View。 //&hellip;
+                     想要在 app 裡加入 map 的功能時，必須使用 MapKit framework 底下的MKMapView class（詳見 Apple 文件），其定義如下： // An embeddable map interface, similar to the one provided by the Maps application.class MKMapView : UIView MKMapView是一個 UIView，因此無法直接將它應用在 SwiftUI&nbsp;View 裡面，而是得先透過UIViewRepresentable這個 wrapper（詳見 Apple 文件）來將它包裝成 SwiftUI 認得的 View。 // A wrapper for a UIKit&hellip;
                 ]]>
             </summary>
         <content type="html">
@@ -301,14 +307,14 @@ struct ContentView: View {
                     <img src="https://tommysush.github.io/media/posts/15/henry-perks-BJXAxQ1L7dI-unsplash.jpg" alt="Photo by henry perks on Unsplash" />
                 
   <p>
-    想要在 app 裡加入 map 的功能時，必須使用 <strong><em>MapKit</em></strong> framework 底下的 <code>MKMapView</code> class（<a href="https://developer.apple.com/documentation/mapkit/mkmapview" target="_blank">詳見 Apple 文件</a>），其定義如下：
+    想要在 app 裡加入 map 的功能時，必須使用 <strong>MapKit</strong> framework 底下的<code>MKMapView</code> class（<a href="https://developer.apple.com/documentation/mapkit/mkmapview" target="_blank" class="" data-link-popup-id="1555941466744">詳見 Apple 文件</a>），其定義如下：
   </p>
 <pre class="line-numbers  language-swift"><code>// An embeddable map interface, similar to the one provided by the Maps application.
 
 class MKMapView : UIView</code></pre>
 
   <p>
-    <code>MKMapView</code> 是一個 <em><strong>UIView</strong></em>，因此無法直接在 SwiftUI's <em><strong>View</strong></em> 裡使用它，而是得透過 <code>UIViewRepresentable</code> 這個 wrapper（<a href="https://developer.apple.com/documentation/swiftui/uiviewrepresentable" target="_blank">詳見 Apple 文件</a>）來將它包裝成 SwiftUI 認得的 <strong><em>View</em></strong>。
+    <code>MKMapView</code>是一個 <strong>UIView</strong>，因此無法直接將它應用在 SwiftUI&nbsp;<strong>View</strong> 裡面，而是得先透過<code>UIViewRepresentable</code>這個 wrapper（<a href="https://developer.apple.com/documentation/swiftui/uiviewrepresentable" target="_blank">詳見 Apple 文件</a>）來將它包裝成 SwiftUI 認得的 <strong>View</strong>。
   </p>
 <pre class="line-numbers  language-swift"><code>// A wrapper for a UIKit view that you use to integrate that view into your SwiftUI view hierarchy.
 
@@ -321,7 +327,7 @@ public protocol UIViewRepresentable : View where Self.Body == Never {
   </p>
 
   <ol>
-    <li>由於會使用到 <strong><em>MapKit</em></strong>，因此在 <code>import SwiftUI</code> 的下一行必須導入 <em><strong>MapKit</strong></em>。</li><li>另外，讓創建的 MapView struct 遵循 <strong><em>UIViewRepresentable</em></strong> protocol。<br></li>
+    <li>由於會使用到 <strong>MapKit</strong>，因此在<code>import SwiftUI</code>的下一行必須導入<code>import&nbsp;MapKit</code>。</li><li>另外，讓創建的 MapView struct 遵循<code>UIViewRepresentable</code> protocol。<br></li>
   </ol>
 <pre class="line-numbers  language-swift"><code>// MapView.swift
 
@@ -333,7 +339,7 @@ struct MapView: UIViewRepresentable {
 }</code></pre>
 
   <p>
-    不過，Xcode 並無法編譯以上的程式碼，所以會出現以下的錯誤訊息：<br>"&nbsp;<em><strong>Type 'MapView' does not conform to protocol 'UIViewRepresentable</strong>'&nbsp;</em>"。所以，接著必須在&nbsp;"more code" 的位置插入兩個 function，分別是&nbsp;<code>makeUIView()</code>&nbsp;和&nbsp;<code>updateUIView()</code>&nbsp;。
+    不過，Xcode 並無法編譯以上的程式碼，所以會出現以下的錯誤訊息：<br>"&nbsp;<em><strong>Type 'MapView' does not conform to protocol 'UIViewRepresentable</strong>'&nbsp;</em>"。所以，接著必須在&nbsp;"<strong>more code</strong>" 的位置插入兩個 function，分別是<code>makeUIView()</code>和<code>updateUIView()</code>。
   </p>
 <pre class="line-numbers  language-swift"><code>//MapView.swift
 
@@ -357,7 +363,7 @@ struct MapView: UIViewRepresentable {
 }</code></pre>
 
   <p>
-    有一點要注意的是，我們在這兩個 function 的 <code>context</code> 參數中直接賦予值 "<em><strong>Context</strong></em>"，其實 Context 等同於是 <code>UIViewRepresentableContext&lt;Self&gt; </code>（ <em><strong>Self</strong></em> 即是指 <em><strong>MapView</strong></em> ）。之所以能簡化為 Context，是因為在 <strong><em>UIViewRepresentable</em></strong> 裡有著這樣的定義（在 Xcode 裡按下 <code>Cmd + Shift + O</code>，查找 UIViewRepresentable ）。
+    有一點要注意的是，我們在這兩個 function 的<code>context</code>參數中直接賦予值 "<strong>Context</strong>"，其實 Context 等同於是<code>UIViewRepresentableContext&lt;Self&gt;</code>（ <strong>Self</strong> 即是指 <strong>MapView</strong> ）。之所以能簡化為 Context，是因為在 <code>UIViewRepresentable</code> 裡有著這樣的定義（在 Xcode 裡按下 <code>Cmd + Shift + O</code>，查找 UIViewRepresentable ）。
   </p>
 <pre class="line-numbers  language-swift"><code>public protocol UIViewRepresentable : View where Self.Body == Never {
     ...
@@ -366,7 +372,7 @@ struct MapView: UIViewRepresentable {
 </code></pre>
 
   <p>
-    至此，我們已可將創建的 <strong><em>MapView</em></strong> 用於 <em><strong>SwiftUI View</strong></em>，讓我們的 app 出現 map 囉！
+    至此，我們已可將創建的 MapView 用於 SwiftUI View，讓我們的 app 出現 map 囉！
   </p>
 <pre class="line-numbers  language-swift"><code>// ContentView.swift
 
@@ -381,6 +387,15 @@ struct ContentView: View {
         
     }
 }</code></pre>
+<hr class="separator separator--dots" />
+
+    <h6 id="---apple-developer-documentation">
+      [ 補充資料 ] Apple Developer Documentation
+    </h6>
+
+  <ul>
+    <li><a href="https://developer.apple.com/documentation/swiftui/uiviewrepresentable" target="_blank">SwiftUI &gt; Framework Integration &gt; UIViewRepresentable</a></li>
+  </ul>
             ]]>
         </content>
     </entry>
@@ -394,7 +409,7 @@ struct ContentView: View {
             <category term="Taiwan Equity"/>
             <category term="Asset Management"/>
 
-        <updated>2021-03-05T08:16:40+08:00</updated>
+        <updated>2021-03-08T21:14:02+08:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://tommysush.github.io/media/posts/13/markus-winkler-3t3Tk-BYiA4-unsplash.jpg" alt="Photo by Markus Winkler on Unsplash" />
@@ -409,9 +424,9 @@ struct ContentView: View {
 <h3>日期：2021年3月3日， 營收追蹤 📈</h3>
 <p>針對2月份的單月營收、累計營收，茲分析如下：</p>
 <ol class="ul1">
-<li class="li1">今年2月份工作天數僅16天，較去年的20天減少20%。但2月營收仍較去年同期成長19.52%，若<span class="s2"><span style="color: #3598db;">還原工作天數差異則年成長推估可達49.40%</span>。至於<span style="color: #3598db;">1~2月累計營收的年成長率則為49.39%</span></span>。</li>
-<li class="li1">由於2020年財報尚未出爐，匯兌損益仍以去年Q3部位為計算基準。另外，<span style="color: #3598db;">考量公司現金增資案已確認，故調整計算EPS的流通在外股數（增加5,000仟股）。而剩餘期間的營收年增率設定為+25%</span>。</li>
-<li class="li1">根據以上假設，<span style="color: #3598db;">預估2021全年EPS仍可達5.705元，forward PER為12.7x，次年（2022年）配息4.6元，以3/3收盤價72.2元來算，殖利率為6.37%</span>。<strong><span class="s2" style="color: #e03e2d;">值得參與原始股東的現金增資認股</span></strong>。</li>
+<li class="li1">今年2月份工作天數僅16天，較去年的20天減少20%。但2月營收仍較去年同期成長19.52%，若<span class="s2"><span style="color: #2dc26b;"><strong>還原工作天數差異則年成長推估可達49.40%</strong></span>。至於<span style="color: #2dc26b;"><strong>1~2月累計營收的年成長率則為49.39%</strong></span></span>。</li>
+<li class="li1">由於2020年財報尚未出爐，匯兌損益仍以去年Q3部位為計算基準。另外，<span style="color: #2dc26b;"><strong>考量公司現金增資案已確認，故調整計算EPS的流通在外股數（增加5,000仟股）。而剩餘期間的營收年增率設定為+25%</strong></span>。</li>
+<li class="li1">根據以上假設，<span style="color: #2dc26b;"><strong>預估2021全年EPS仍可達5.705元，forward PER為12.7x，次年（2022年）配息4.6元，以3/3收盤價72.2元來算，殖利率為6.37%</strong></span>。<strong><span style="color: #e03e2d;">在此分析基礎上，認為此次<span class="s2">的現金增資認股案是值得原始股東參與的</span></span></strong>。</li>
 <li class="li1">若是保守預估成長10%，則預估全年EPS仍可達5.095元，forward PER為14.2x，次年（2022年）配息4.1元，以3/3收盤價72.2元來算，殖利率為5.68%。</li>
 <li class="li2"><span class="s4">根據樂觀版的營收預期（</span>YoY+25%<span class="s4">）給予本益比目標</span>18~20x<span class="s4">，價格</span>103~114<span class="s4">元。本淨比目標</span>4.0~4.4x<span class="s4">，價格</span>86.5~95<span class="s4">元</span><span class="s5">。</span></li>
 </ol>
@@ -438,7 +453,7 @@ struct ContentView: View {
 <li>新建工程預計的完成時間點為何時？預計可再提高多少產能(或滿載時可挹注多少營收)。
 <ul style="list-style-type: square;">
 <li><span style="color: #3598db;">新廠預計112年Q2前完工；若滿載狀態會增加年營收約10億左右。<br></span></li>
-<li>（個人補充：<span class="s1">2018</span>年擴廠完成時，滿載月營收可增加<span class="s1">5,000</span>萬元，本次擴廠後滿載時月營收可再增加<span class="s1">8,000</span>萬元，因此<span style="color: #3598db;">滿載的月營收估約<span class="s1">2.5</span>億元</span>。）</li>
+<li>（<span style="color: #2dc26b;"><strong>個人補充：<span class="s1">2018</span>年擴廠完成時，滿載月營收可增加<span class="s1">5,000</span>萬元，本次擴廠後滿載時月營收可再增加<span class="s1">8,000</span>萬元，因此滿載的月營收估約<span class="s1">2.5</span>億元</strong></span>。）</li>
 </ul>
 </li>
 <li>近期營收回溫，主要是那個領域的產品挹注。另外，2020年個領域產品的營收佔比為何。
@@ -462,10 +477,10 @@ struct ContentView: View {
 </ol>
 <p>針對公司股權可能的變動，茲分析如下：</p>
 <ol>
-<li><span class="s3">公司現行流通在外股數為71,234,404股（已扣除庫藏股1,375仟股），</span><span style="color: #3598db;">若可轉債的轉換價格訂在75元，最終全數轉換等於4,000仟股，加上現金增資的5,000仟股，股本將會膨脹12.63%至80,234,404股</span><span class="s3">。</span></li>
-<li>假定可轉債自發行後分三年轉換完畢，即2022年轉換1,300仟股、2023年轉換1,300仟股、2024轉換最後的1,400仟股，則<span class="s5" style="color: #3598db; font-family: var(--font-base); font-size: inherit; font-weight: var(--font-weight-normal);">從今年起每年的EPS稀釋效果分別為0.9344x、0.9832x、0.9835x、0.9826x</span><span style="color: var(--text-editor-body-color); font-family: var(--font-base); font-size: inherit; font-weight: var(--font-weight-normal);">。</span></li>
+<li><span class="s3">公司現行流通在外股數為71,234,404股（已扣除庫藏股1,375仟股），</span><span style="color: #2dc26b;"><strong>若可轉債的轉換價格訂在75元，最終全數轉換等於4,000仟股，加上現金增資的5,000仟股，股本將會膨脹12.63%至80,234,404股</strong></span><span class="s3">。</span></li>
+<li>假定可轉債自發行後分三年轉換完畢，即2022年轉換1,300仟股、2023年轉換1,300仟股、2024轉換最後的1,400仟股，則<span style="color: #2dc26b;"><strong><span class="s5" style="font-family: var(--font-base); font-size: inherit;">從今年起每年的EPS稀釋效果分別為0.9344x、0.9832x、0.9835x、0.9826x</span></strong></span><span style="color: var(--text-editor-body-color); font-family: var(--font-base); font-size: inherit; font-weight: var(--font-weight-normal);">。</span></li>
 <li>根據上述轉換價格與轉換進程的假設，2021年EPS將由原先預估的5.061元稀釋為4.729元。（目前仍假定剩餘期間營收較去年持平，此一假設待2月營收出爐後將重新調整）</li>
-<li><span style="color: #3598db;">按照公司過去盈餘轉增資的態度來看，應該是有把握未來三年成長會超過15%以上，足以將股本膨脹的稀釋效果抵銷掉，而此筆資金又足以應付擴廠所需</span>。以總金額來看，此財務操作算是中規中矩。</li>
+<li><span style="color: #2dc26b;"><strong>按照公司過去盈餘轉增資的態度來看，應該是有把握未來三年成長會超過15%以上，足以將股本膨脹的稀釋效果抵銷掉，而此筆資金又足以應付擴廠所需</strong></span>。以總金額來看，此財務操作算是中規中矩。</li>
 </ol>
 <hr>
 <h3>日期：2020年4月1日， 公司詢答 🗞</h3>
@@ -560,14 +575,14 @@ struct ContentView: View {
 <h4>🎯 公司業務介紹</h4>
 <ol>
 <li>目前共有兩座工廠，分別位於台灣台中及江蘇無錫，員工數約530人；另外，還有一家美國子公司從事自有品牌銷售。</li>
-<li>至於整體營收，目前P-Duke<span style="color: #3598db;">自有品牌（毛利更高，有售後服務）的部分佔營收30％，ODM貼牌的部分則佔70％</span>。</li>
+<li>至於整體營收，目前P-Duke<strong><span style="color: #2dc26b;">自有品牌（毛利更高，有售後服務）的部分佔營收30％，ODM貼牌的部分則佔70％</span></strong>。</li>
 <li>公司產品應用領域可分為以下幾項：
 <ul style="list-style-type: square;">
 <li> 再生能源：主要是太陽能和風力發電，客戶則以中國大陸和歐洲為主（中國客戶的產品不僅內銷亦有整機輸出海外，等同是博大產品輸出至其他海外市場）。再生能源領域是「過去」幾年成長較快速的領域。</li>
 <li>工業電腦：台灣為工業電腦生產重鎮，不論是中小型的利基IPC廠或大型業者（e.g. 研華）幾乎都是博大的客戶。</li>
 <li>鐵道及自動化：產品應用於小瓦數的訊號控制或大瓦數的提供功率，其範圍包含廣播系統、光源系統、吿示系統、門的開關系統、及控制系統等等；最知名的客戶(鐵道系統商)包含中國中車、及更之前法國的阿爾斯通（ALSTOM）。</li>
 <li>博大產品的訴求重點在於「Reliability」、「Quality」、「法規認證」，絕非一般消費型產品可以相比拼的。</li>
-<li><span style="color: #3598db;">醫療領域：公司已深耕5年以上，並推出一系列產品，但醫療產品須經嚴格的法規及安規認證（產品驗證期約需3年），故需更長的時間發酵</span>；像目前放量（呈現成長趨勢）的產品即為4年前所推出的。</li>
+<li><span style="color: #2dc26b;"><strong>醫療領域：公司已深耕5年以上，並推出一系列產品，但醫療產品須經嚴格的法規及安規認證（產品驗證期約需3年），故需更長的時間發酵</strong></span>；像目前放量（呈現成長趨勢）的產品即為4年前所推出的。</li>
 <li>軍工領域：專案性質的採購案件較多。</li>
 <li>通訊產品：應用於基地台（5G也可參與到），但公司非刻意聚焦在此產品線，只是產品正好符合基地台製造商的需要。</li>
 </ul>
@@ -583,14 +598,14 @@ struct ContentView: View {
 <li>鐵道應用：公司觀察到客戶購買單一產品取得信賴後，會考慮將系統內其他瓦數的零件也置換為博大產品，因此公司已陸續補足50瓦以上產品線，並提供不同封裝規格，將鐵道產品的range涵蓋得更完整。在應用範例上，例如駕駛系統上小瓦數的訊號控制，大的則如整塊電路板的電源提供。
 <ol style="list-style-type: lower-roman;">
 <li>目前鐵道產品銷售仍以低瓦數為主，主要用於訊號控制；高瓦數部分，則是近1、2年蒐集市場資訊後才開發出來，因此佔比仍不高，但參照低瓦數的發展歷程來看，公司仍保持樂觀看待。</li>
-<li>單以瓦數別來看（涵蓋所有產品類別），<span style="color: #3598db;">低瓦數（60瓦以下、屬成熟型產品，多由無錫廠生產）產品約佔營收70～80％，高瓦數（有know-how、屬高階產品，由台灣廠生產）約20～30％</span>。</li>
+<li>單以瓦數別來看（涵蓋所有產品類別），<span style="color: #2dc26b;"><strong>低瓦數（60瓦以下、屬成熟型產品，多由無錫廠生產）產品約佔營收70～80％，高瓦數（有know-how、屬高階產品，由台灣廠生產）約20～30％</strong></span>。</li>
 <li>以鐵道領域來看，中國客戶佔營收約30～40％，但最主要的客戶仍在歐洲。</li>
 </ol>
 </li>
 <li>醫療應用：過去幾年公司陸續在不同尺寸及瓦數上進行產品佈局，但醫療產品亟需時間發酵（產品推出後約3～4年才放量，其中光是送樣認證就需近3年）。例如首批開發出的產品MPP及MOP，本來佔營收比重極低、僅約1~3％，不過去年已大幅竄升至7％。
 <ol style="list-style-type: lower-roman;">
-<li><span style="color: #3598db;">公司認為醫療領域是未來發展趨勢，相信未來數年都會有較高的複合成長率</span>。</li>
-<li>另外，由於<span style="color: #3598db;">醫療產品除法規認證（EN60601）外，還須通過各國不同的醫療設備相關認證，因此一旦採用博大的產品之後，除非設備淘汰、否則就會持續使用博大的產品</span>。應用範例，包含診療設備、監測設備、居家照護、牙醫設備、外科手術設備等。</li>
+<li><span style="color: #2dc26b;"><strong>公司認為醫療領域是未來發展趨勢，相信未來數年都會有較高的複合成長率</strong></span>。</li>
+<li>另外，由於<span style="color: #2dc26b;"><strong>醫療產品除法規認證（EN60601）外，還須通過各國不同的醫療設備相關認證，因此一旦採用博大的產品之後，除非設備淘汰、否則就會持續使用博大的產品</strong></span>。應用範例，包含診療設備、監測設備、居家照護、牙醫設備、外科手術設備等。</li>
 </ol>
 </li>
 </ul>
@@ -598,13 +613,13 @@ struct ContentView: View {
 </ol>
 <h4>🎯 <strong>營收回顧&amp;展望</strong></h4>
 <ol>
-<li>對博大來說，<span style="color: #3598db;">傳統旺季是第2季和第3季（從5月份到10月份）</span>，第4季次之、第1季則為相對淡季。</li>
+<li>對博大來說，<span style="color: #2dc26b;"><strong>傳統旺季是第2季和第3季（從5月份到10月份）</strong></span>，第4季次之、第1季則為相對淡季。</li>
 <li>即便營收主要立足於DC/DC領域，過去5年營收的年複合成長率仍有+11％。
 <ul style="list-style-type: square;">
 <li>目前訂單的能見度大約在8週左右。</li>
 <li>今年營收預期仍有兩位數的成長，比較樂觀成長的領域依序為醫療（預估YoY+30％）、鐵道（第1季衰退僅是中國客戶的交貨期延後，但訂單已在廠，預估至少兩位數成長）、工業。</li>
 <li>至於光伏產業，由於各國政府補貼放緩，客戶都持觀望態度，而國外風電熱度也已退燒，因此今年對再生能源的看法相對保守。</li>
-<li><span style="color: #3598db;">車用領域部分，公司兩、三年前評估認為市場競爭者過多，因此不打算涉入，而是將研發實力聚焦在醫療、鐵道領域</span>。</li>
+<li><span style="color: #2dc26b;"><strong>車用領域部分，公司兩、三年前評估認為市場競爭者過多，因此不打算涉入，而是將研發實力聚焦在醫療、鐵道領域</strong></span>。</li>
 </ul>
 </li>
 <li>主力營收在歐洲、約佔70%，其次為亞洲（中國、韓國、印度市場都有積極介入），而去年成長性最好的也是亞洲和歐洲；今年第1季，則是台灣跟歐洲市場成長，美國市場下滑，主要是軍工專案落差導致。
@@ -613,7 +628,7 @@ struct ContentView: View {
 <li>前兩年行銷費用的投入，還有新產品的持續研發推出，讓自有品牌有明顯的成長幅度，但同時ODM也是持續在成長，而公司並不擔心自有品牌和ODM貼牌之間的競合。</li>
 </ul>
 </li>
-<li>工業領域每年都穩定成長（約有兩位數成長），<span style="color: #3598db;">醫療領域則是近年成長最快速的</span>，而鐵道部分去年的躍升主要是中國市場發酵。今年第1季，醫療部分大幅成長，而鐵道部分看似衰退，但主因是該中國客戶訂單（已在廠）交貨時間延後至第2季、第3季所導致，公司對於今年鐵道領域是樂觀的。
+<li>工業領域每年都穩定成長（約有兩位數成長），<span style="color: #2dc26b;"><strong>醫療領域則是近年成長最快速的</strong></span>，而鐵道部分去年的躍升主要是中國市場發酵。今年第1季，醫療部分大幅成長，而鐵道部分看似衰退，但主因是該中國客戶訂單（已在廠）交貨時間延後至第2季、第3季所導致，公司對於今年鐵道領域是樂觀的。
 <ul style="list-style-type: square;">
 <li>近三年及今年首季的產品別營收佔比請參考下圖(一)</li>
 <li>近兩年及今年首季的產品別營收年成長率（YoY％）請參考下圖(二)</li>
@@ -627,18 +642,18 @@ struct ContentView: View {
 </li>
 <li>往年毛利率大約是52％，但去年下滑至50％，主要是因為原材料價格漲幅過大所導致，不過在其他費用控制上都有維持好（營業費用佔比未增加）。今年第1季同樣受到原材料價格影響，另外還受到產品組合影響（鐵道受前述訂單延後出貨影響，毛利較低的通訊佔比提高），第一季稅後EPS為1.63元，營益率34％。
 <ul style="list-style-type: square;">
-<li>產品毛利率以「通訊產品」最低，其他各領域的差異則不會太大，目前則是<span style="color: #3598db;">「醫療」和「鐵道」的毛利率最好，原則上都在50％左右</span>。</li>
+<li>產品毛利率以「通訊產品」最低，其他各領域的差異則不會太大，目前則是<span style="color: #2dc26b;"><strong>「醫療」和「鐵道」的毛利率最好，原則上都在50％左右</strong></span>。</li>
 <li>被動元件缺料雖在去年爆發，但博大在2017年中就有觀察到跡象，因此已提前大量備料（該批原材料已於去年上半年用罄，因此毛利率從去年第3季起下滑）。</li>
 <li>目前使用的仍是漲價的原材料，且工業用被動元件與消費端所使用的不可一概而論，雖然今年以來價格已有緩和，但換IC的部分又漲上來。</li>
 <li>原材料採購上，MOS（不確定是啥?）已由美廠轉為台廠，而IC的部分也正在轉換中（台灣的IC design house），預期年底可轉換完成，目標是提升毛利率重回50％之上。</li>
-<li><span style="color: #3598db;">新產品和舊產品之間的毛利率並不會有太大的差異（不會新產品一上市，舊產品就大幅跌價），主要還是著重在提供客製化的服務</span>。</li>
+<li><span style="color: #2dc26b;"><strong>新產品和舊產品之間的毛利率並不會有太大的差異（不會新產品一上市，舊產品就大幅跌價），主要還是著重在提供客製化的服務</strong></span>。</li>
 </ul>
 </li>
-<li><span style="color: #3598db;">台灣和無錫兩廠的擴廠將於第3季全部完成，屆時產能可再增加45～50％（產能若滿載，約可增加6,000萬的月營收），至於新購入土地的部分則是為了接續兩三年後的預期擴廠需求（屆時才會進行規劃）</span>。
+<li><span style="color: #2dc26b;"><strong>台灣和無錫兩廠的擴廠將於第3季全部完成，屆時產能可再增加45～50％（產能若滿載，約可增加6,000萬的月營收），至於新購入土地的部分則是為了接續兩三年後的預期擴廠需求（屆時才會進行規劃）</strong></span>。
 <ul style="list-style-type: square;">
 <li>目前公司從接單至出貨的時間大約需要4～6週，在去年被動元件大缺料期間則拉長至8週左右。</li>
-<li><span style="color: #3598db;">之所以提前購入土地，是公司評估近兩年表現後，預估每年可再成長15％，因此目前擴廠完成的產能將在3年內達到滿載，屆時將再有擴廠需求（即目前購入的新廠土地，計入此部分後產能可增加70％）</span>。公司依慣例會提前兩、三年進行產能規劃，而一座新廠房建置約需2～3年。</li>
-<li><span style="color: #3598db;">新廠的自動化程度將會較舊廠更高，例如焊接、SMD等製程的改善</span>。</li>
+<li><span style="color: #2dc26b;"><strong>之所以提前購入土地，是公司評估近兩年表現後，預估每年可再成長15％，因此目前擴廠完成的產能將在3年內達到滿載，屆時將再有擴廠需求（即目前購入的新廠土地，計入此部分後產能可增加70％）</strong></span>。公司依慣例會提前兩、三年進行產能規劃，而一座新廠房建置約需2～3年。</li>
+<li><span style="color: #2dc26b;"><strong>新廠的自動化程度將會較舊廠更高，例如焊接、SMD等製程的改善</strong></span>。</li>
 <li>台灣跟無錫兩廠擴廠完成後，每個月將增加約50萬的折舊費用。</li>
 </ul>
 </li>
@@ -646,7 +661,7 @@ struct ContentView: View {
 <p data-adtags-visited="true">櫃買中心的博大科技法說會投影片資料連結，👉<a rel="noreferrer noopener" aria-label="由此去 (在新分頁中開啟)" href="http://mops.twse.com.tw/nas/STR/810920190423M001.ppt" target="_blank">請點此連結下載</a>。</p>
 <hr>
 <h3>日期：2019年4月13日， 公司詢答 🗞</h3>
-<p>以下為向公司洪發言人所提之問提（藍色字體為答覆）：</p>
+<p>以下為向公司洪發言人所提之問提（<span style="color: #3598db;">藍色字體</span>為答覆）：</p>
 <ol>
 <li>請問近日公司斥資2.5億元購入之台中市南屯區土地，是否就是先前回覆時提到要在台灣設立之新廠。<br>
 <figure class="post__image post__image--center" ><img loading="lazy" src="https://lh3.googleusercontent.com/tp5IcYjaB-clE-wJkFjJeQFveETpyKAJO0sx1hX0QB3RrzGz4rkIhXTS1PWbpoxqGHQHeWs48Wkvua04bChdgDRVqqNKoxdpUKnPqn6lja_9_lVo3BacRfgYirwyxKVxPya0Um23=w1200" data-is-external-image="true"  alt="20190413提問圖1" width="1200" height="992">
@@ -672,7 +687,7 @@ struct ContentView: View {
 </ol>
 <hr>
 <h3>日期：2018年11月16日， 公司詢答 🗞</h3>
-<p>以下為向公司洪發言人所提之問提（藍色字體為答覆）：</p>
+<p>以下為向公司洪發言人所提之問提（<span style="color: #3598db;">藍色字體</span>為答覆）：</p>
 <ol>
 <li>貴公司自2017年起營收持續穩健成長，惟「應收帳款」自2018年第二季出現較明顯增長，導致應收帳款收現天數稍有拉高。請問，自第二季開始的「應收帳款」增長是否為拓展新市場客戶（e.g. 印度）而採取之策略。此外，「存貨」自2018年起約以每季15％的速度增加，配合上目前公司的產能滿載。請問，「存貨」穩定增長是因原料漲價（e.g. MOSFET、被動元件…）提前備料，還是因為公司對未來訂單的看法樂觀呢；若是，則訂單能見度又有多長呢。<br>
 <figure class="post__image post__image--center" ><img loading="lazy" src="https://lh3.googleusercontent.com/_OKbk5IxBUShSbxklMZNEjcPisPRrActJ1ADYJcFuszPT78PmV-QHDjSp_3-HeA5vMGcsyulperI7u1iRWM5AVllA837t-mmmi_zFsizNY1Hb1FhUdScv4zDXFpDC_WfpvSskrvb=w1200" data-is-external-image="true"  alt="20181116提問圖2" width="1200" height="523">
@@ -705,7 +720,7 @@ struct ContentView: View {
 </ol>
 <hr>
 <h3>日期：2016年3月20日， 公司詢答 🗞</h3>
-<p>以下為向公司洪發言人所提之問提（藍色字體為答覆）：</p>
+<p>以下為向公司洪發言人所提之問提（<span style="color: #3598db;">藍色字體</span>為答覆）：</p>
 <ol>
 <li>是否誠如報載，是因為新的高毛利產品線出貨所挹注呢？可否明確指出該產品線為何？
 <ul style="list-style-type: square;">
@@ -725,7 +740,7 @@ struct ContentView: View {
 </ol>
 <hr>
 <h3>日期：2015年11月17日， 公司詢答 🗞</h3>
-<p>以下為向公司洪發言人所提之問提（藍色字體為答覆）：</p>
+<p>以下為向公司洪發言人所提之問提（<span style="color: #3598db;">藍色字體</span>為答覆）：</p>
 <ol>
 <li>相較於第二季，雖然已減碼部份歐元，<wbr>但目前整體外匯部位曝險仍高，<wbr>請問貴公司是否有進一步的處分計畫呢。
 <ul style="list-style-type: square;">
@@ -740,7 +755,7 @@ struct ContentView: View {
 </ol>
 <hr>
 <h3>日期：2015年5月13日， 公司詢答 🗞</h3>
-<p>以下為向公司陳發言人所提之問提（藍色字體為答覆）：</p>
+<p>以下為向公司陳發言人所提之問提（<span style="color: #3598db;">藍色字體</span>為答覆）：</p>
 <ol>
 <li>截至四月底為止，貴公司在外幣兌換上累計已產生近7000萬損失，不知貴公司對於匯率上的判斷為何？
 <ul style="list-style-type: square;">
@@ -777,7 +792,7 @@ struct ContentView: View {
 </ol>
 <hr>
 <h3>日期：2014年11月7日， 公司詢答 🗞</h3>
-<p>以下為向公司陳發言人所提之問提（藍色字體為答覆）：</p>
+<p>以下為向公司陳發言人所提之問提（<span style="color: #3598db;">藍色字體</span>為答覆）：</p>
 <ol>
 <li>本期（單季）營運現金流量突然轉為負數，經過逐項比對發現是"其他金融資產"變動造成之影響，而再與資產負債表交叉對照後，又發現"現金"較上一季減少約1.5億元，而"其他金融資產"則增加9千多萬元。請問這筆突然大增的其他金融資產內容為何？將現金轉為這些金融資產是因為營業目的所需嗎？可否詳加說明呢。
 <ul style="list-style-type: square;">
@@ -809,7 +824,7 @@ struct ContentView: View {
 </ol>
 <hr>
 <h3>日期：2014年5月18日， 公司詢答 🗞</h3>
-<p>以下為向公司陳發言人所提之問提（藍色字體為答覆）：</p>
+<p>以下為向公司陳發言人所提之問提（<span style="color: #3598db;">藍色字體</span>為答覆）：</p>
 <ol>
 <li>過去數年貴公司在固定資產項目未有太大變化，沒有較大的資本支出（擴廠），但是，因今年前四個月的亮眼營收表現（年成長率高達19.53%），故想請教，在現有產能之下，能應付到多高的營收成長水準呢？而以四月份的營收來看，目前的產能使用率約為多少？
 <ul style="list-style-type: square;">
@@ -834,7 +849,7 @@ struct ContentView: View {
 </ol>
 <hr>
 <h3>日期：2014年5月14日， 公司詢答 🗞</h3>
-<p>以下為向公司陳發言人所提之問提（藍色字體為答覆）：</p>
+<p>以下為向公司陳發言人所提之問提（<span style="color: #3598db;">藍色字體</span>為答覆）：</p>
 <ol>
 <li><span style="color: var(--text-editor-body-color); font-family: var(--font-base); font-size: inherit; font-weight: var(--font-weight-normal);">貴公司帳上現金或約當現金已達12億元，而公司實收資本額為6億元，請問貴公司保留如此大額現金部位的原因為何？</span><br>
 <ul style="list-style-type: square;">
@@ -901,7 +916,7 @@ struct ContentView: View {
             <category term="Swift &amp; SwiftUI"/>
             <category term="Self-Taught"/>
 
-        <updated>2021-03-08T14:44:11+08:00</updated>
+        <updated>2021-03-08T21:30:54+08:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://tommysush.github.io/media/posts/6/joshua-reddekopp-SyYmXSDnJ54-unsplash.jpg" alt="Photo by Joshua Reddekopp on Unsplash" />
@@ -969,26 +984,26 @@ struct ContentView: View {
             <category term="Self-Taught"/>
             <category term="Build Website"/>
 
-        <updated>2021-03-08T16:34:53+08:00</updated>
+        <updated>2021-03-08T21:22:11+08:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://tommysush.github.io/media/posts/2/rajeshwar-bachu-K4txLik7pnY-unsplash.jpg" alt="Photo by Rajeshwar Bachu on Unsplash" />
-                    測試結果Image：透過 Google 相簿連結轉換工具後，即可順利插入圖片（正常使用😄）Gallery：只能插入電腦檔案，無法以網址連結建立（無法使用😢）Media：只要直接貼上 Youtube 影片的連結網址即可（正常使用😄）使用建議圖片的 Class 設定值，使用 Wide image 或 Centered image 即可，長寬無需自訂如果想展示多張圖片，只能組合 Left-aligned image 和 Right-aligned image，但不建議這樣使用。如果排版因此跑掉，可以在 &lt; &gt; HTML 模式下調整。👇以下為 Image 不同 Class 設定的展示👇 YouTube影片
+                    測試結果Image：透過 Google 相簿連結轉換工具後，即可順利插入圖片（正常使用😄）Gallery：只能插入電腦檔案，無法以網址連結建立（無法使用😢）Media：只要直接貼上 Youtube 影片的連結網址即可（正常使用😄）使用建議圖片的 Class 設定值，選 Wide image 或 Centered image 即可，長寬無需自訂。若想展示多張圖片，只能組合 Left-aligned image 和 Right-aligned image，但不建議這樣使用。如果排版因此跑掉，可以在 "&lt; &gt; HTML" 模式下調整。👇以下為 Image 不同 Class 設定的展示👇 YouTube影片
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
                     <img src="https://tommysush.github.io/media/posts/2/rajeshwar-bachu-K4txLik7pnY-unsplash.jpg" alt="Photo by Rajeshwar Bachu on Unsplash" />
-                <h4><span style="color: #2dc26b;"><strong>測試結果</strong></span></h4>
+                <h4><strong>測試</strong><strong>結果</strong></h4>
 <ul>
 <li><span style="color: #3598db;"><strong>Image</strong></span>：透過 <a href="https://www.oxxostudio.tw/project/google-photo/" target="_blank" rel="nofollow noopener noreferrer">Google 相簿連結轉換工具</a>後，即可順利插入圖片（正常使用😄）</li>
 <li><span style="color: #3598db;"><strong>Gallery</strong></span>：只能插入電腦檔案，無法以網址連結建立（無法使用😢）</li>
 <li><span style="color: #3598db;"><strong>Media</strong></span>：只要直接貼上 Youtube 影片的連結網址即可（正常使用😄）</li>
 </ul>
-<h4><span style="color: #2dc26b;"><strong>使用建議</strong></span></h4>
+<h4><strong>使用建議</strong></h4>
 <ul>
-<li>圖片的 Class 設定值，使用 <em>Wide image</em> 或 <em>Centered image</em> 即可，長寬無需自訂</li>
-<li>如果想展示多張圖片，只能組合 <em>Left-aligned image</em> 和 <em>Right-aligned image</em>，但不建議這樣使用。如果排版因此跑掉，可以在 <span style="color: #3598db;"><strong>&lt; &gt; HTML </strong></span>模式下調整。</li>
+<li>圖片的 <code>Class</code> 設定值，選 <span style="color: #2dc26b;"><strong>Wide image</strong></span> 或 <span style="color: #2dc26b;"><strong>Centered image</strong></span> 即可，長寬無需自訂。</li>
+<li>若想展示多張圖片，只能組合 <span style="color: #2dc26b;"><strong>Left-aligned image</strong></span> 和 <span style="color: #2dc26b;"><strong>Right-aligned image</strong></span>，但不建議這樣使用。如果排版因此跑掉，可以在 "<span style="color: #3598db;"><strong>&lt; &gt; HTML</strong></span>" 模式下調整。</li>
 </ul>
 <p class="align-center">👇以下為 <span style="color: #3598db;"><strong>Image</strong></span> 不同 Class 設定的展示👇</p>
 <figure class="post__image post__image--full" ><img loading="lazy" src="https://lh3.googleusercontent.com/Cnyl5C97Sd2--KMcsnxtoSw1N4I014ymR5m3Ykca9UkyokVC6qQGeZu_Sx6K2kaKjnAuC8ESoReVZHgvcIYdJHGE9oyd4LlIbdZifkA7Do4nJH1fSu1afJJngT1aTTd5_SmiWw4C=w1200" data-is-external-image="true"  alt="Cama Cafe（Full image）" width="" height="">
@@ -1021,7 +1036,7 @@ struct ContentView: View {
             <category term="Retrospection"/>
             <category term="FIRE"/>
 
-        <updated>2021-03-04T21:45:30+08:00</updated>
+        <updated>2021-03-08T21:24:00+08:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://tommysush.github.io/media/posts/1/jan-kahanek-fVUl6kzIvLg-unsplash.jpg" alt="Photo by Jan Kahánek on Unsplash" />
@@ -1034,8 +1049,8 @@ struct ContentView: View {
                     <img src="https://tommysush.github.io/media/posts/1/jan-kahanek-fVUl6kzIvLg-unsplash.jpg" alt="Photo by Jan Kahánek on Unsplash" />
                 <p>2018年11月 —— 在即將度過40歲生日的前夕，因為某些（<span style="text-decoration: line-through;">糾紛</span>）緣故（<span style="text-decoration: line-through;">被迫</span>）離開待了將近15年的公司。雖然提早離開職場本來就在個人的生涯規劃之中，但是就安排的時程來看，還是較預定提前了將近2年，而且當初設定的資產目標，其實也尚未百分之百達成。不過，人生本來就不可能完全按照計劃走。畢竟，如果事事都如預期，那人生豈不是太無趣了嗎！</p>
 
-<p>只不過，提前退職的這兩年等於壓縮到了<strong>過渡期</strong> —— 用於培養退職後興趣與準備個人志業開發的時間。因此，過去這兩年除了保持原本的運動習慣之外，就是不斷設法尋找感興趣並且能夠長期保持熱情的新領域。所幸在2020年的尾聲，總算讓我找到了 —— <strong>Mobile App Development</strong>。</p>
-<p>過去任職於金融產業期間，曾經使用 <strong>Python </strong>與 <strong>Django framework </strong>架設網站，專門用來追蹤台灣上市櫃公司財務數據和營收。當時，對於<strong>程式語言能讓個人憑藉其力創造出新工具</strong>一事深深著迷。當然，除此之外應該還包含以下幾個重要因素：</p>
+<p>只不過，提前退職的這兩年等於壓縮到了<strong>過渡期</strong> —— 用於培養退職後興趣與準備個人志業開發的時間。因此，過去這兩年除了保持原本的運動習慣之外，就是不斷設法尋找感興趣並且能夠長期保持熱情的新領域。所幸在2020年的尾聲，總算讓我找到了 —— <span style="color: #2dc26b;"><strong>Mobile App Development</strong></span>。</p>
+<p>過去任職於金融產業期間，曾經使用 <strong>Python </strong>與 <strong>Django framework </strong>架設網站，專門用來追蹤台灣上市櫃公司財務數據和營收。當時，對於<span style="color: #2dc26b;"><strong>程式語言能讓個人憑藉其力創造出新工具</strong></span>一事深深著迷。當然，除此之外應該還包含以下幾個重要因素：</p>
 <ol>
 <li>程式語言的變革日新月異，永遠有學習不完的新知識，正好迎合個人<span style="text-decoration: line-through;">喜新厭舊</span>喜好學習新事物、充滿好奇心的人格特質。</li>
 <li>Mobile App Development 涵蓋了 UI 設計，能滿足個人對於色彩、排版的濃厚興趣。</li>
@@ -1047,12 +1062,12 @@ struct ContentView: View {
 </blockquote>
 <p>至於開設這個部落格的初心，與其說是想分享些什麼，倒不如說單純是<span style="color: #e03e2d;"><strong>給自己一處能抒發心情，用來記錄生活中所見、所聞、所學、所想的小天地</strong></span>！畢竟，沒有顯赫的家世背景，更沒有能拿來說嘴的豐功偉業，在下只是區區一介草民、素人而已。所以，各位走過、路過的看倌，請隨便讀讀、看看就好。站內文章的（預計）分類及說明如下，</p>
 <ul>
-<li><strong>FIRE / 財務自由人生</strong>：寫些關於人生回顧、自我反省，或是經驗談等等...</li>
-<li><strong>Self-Taught / 自學筆記</strong>：彙整不同知識領域上的學習心得，甚至非學術領域...</li>
-<li><strong>Travel Notes / 旅遊手札</strong>：記錄關於旅遊行前準備、和旅程中各式各樣的酸甜苦辣...</li>
-<li><strong>Asset Management / 資產管理</strong>：追蹤資產標的現況，景氣與金融環境的變化趨勢...</li>
+<li><span style="color: #3598db;"><strong>FIRE / 財務自由人生</strong></span>：寫些關於人生回顧、自我反省，或是經驗談等等...</li>
+<li><span style="color: #3598db;"><strong>Self-Taught / 自學筆記</strong></span>：彙整不同知識領域上的學習心得，甚至非學術領域...</li>
+<li><span style="color: #3598db;"><strong>Travel Notes / 旅遊手札</strong></span>：記錄關於旅遊行前準備、和旅程中各式各樣的酸甜苦辣...</li>
+<li><span style="color: #3598db;"><strong>Asset Management / 資產管理</strong></span>：追蹤資產標的現況，景氣與金融環境的變化趨勢...</li>
 </ul>
-<p>對於文章的內容有任何疑問或指教，都歡迎大家利用文章下方的 <strong>留言板</strong> 進行互動，但請務必遵守留言政策（<strong>保持禮貌與尊重</strong>），謝謝。</p>
+<p>對於文章的內容有任何疑問或指教，都歡迎大家利用文章下方的 <strong>留言板</strong> 進行互動，但請務必遵守留言政策（<span style="color: #2dc26b;"><strong>保持禮貌與尊重</strong></span>），謝謝。</p>
 <p> </p>
             ]]>
         </content>
