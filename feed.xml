@@ -3,7 +3,7 @@
     <title>Lab3F</title>
     <link href="https://tommysush.github.io/feed.xml" rel="self" />
     <link href="https://tommysush.github.io" />
-    <updated>2021-03-08T21:30:54+08:00</updated>
+    <updated>2021-03-09T09:43:17+08:00</updated>
     <author>
         <name>PI of Lab3F</name>
     </author>
@@ -404,12 +404,12 @@ struct ContentView: View {
         <author>
             <name>PI of Lab3F</name>
         </author>
-        <link href="https://tommysush.github.io/bo-da-ke-ji-dai-hao-8109.html"/>
-        <id>https://tommysush.github.io/bo-da-ke-ji-dai-hao-8109.html</id>
+        <link href="https://tommysush.github.io/research-on-p-duke-8109.html"/>
+        <id>https://tommysush.github.io/research-on-p-duke-8109.html</id>
             <category term="Taiwan Equity"/>
             <category term="Asset Management"/>
 
-        <updated>2021-03-08T21:14:02+08:00</updated>
+        <updated>2021-03-09T09:43:17+08:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://tommysush.github.io/media/posts/13/markus-winkler-3t3Tk-BYiA4-unsplash.jpg" alt="Photo by Markus Winkler on Unsplash" />
