@@ -3,7 +3,7 @@
     <title>Lab3F</title>
     <link href="https://tommysush.github.io/feed.xml" rel="self" />
     <link href="https://tommysush.github.io" />
-    <updated>2021-03-11T18:48:47+08:00</updated>
+    <updated>2021-03-12T00:13:34+08:00</updated>
     <author>
         <name>PI of Lab3F</name>
     </author>
@@ -1307,6 +1307,127 @@ struct ContentView: View {
 </li>
 </ol>
 <div> </div>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Integrating UIKit with SwiftUI, 初探</title>
+        <author>
+            <name>PI of Lab3F</name>
+        </author>
+        <link href="https://tommysush.github.io/integrating-uikit-with-swiftui-the-first.html"/>
+        <id>https://tommysush.github.io/integrating-uikit-with-swiftui-the-first.html</id>
+            <category term="Swift &amp; SwiftUI"/>
+            <category term="Self-Taught"/>
+
+        <updated>2021-03-12T00:13:34+08:00</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://tommysush.github.io/media/posts/21/harpal-singh-_zKxPsGOGKg-unsplash.jpg" alt="Photo by Harpal Singh on Unsplash" />
+                     由於 SwiftUI 是從 iOS 13.0 才開始導入（目前版本為 iOS 14.4），相較於遠從 iOS 2.0 就已經存在的 UIKit 來說，簡直就像是新生兒一般的存在。因此，某些時候我們會希望能直接利用 UIKit 或其他較成熟的 Apple framework 所提供的程式碼來進行開發。 在進入正題之前，需對 UIKit 有一些基本的認識： 接下來，將以「使用者從 photo library（照片圖庫）挑選圖片」來進行說明與示範。這個動作將會使用 UIKit 底下的UIImagePickerController，和兩個 delegate protocol - 分別是UINavigationControllerDelegate和UIImagePickerControllerDelegate，但 SwiftUI 無法直接使用它們。 首先，UIImagePickerController是UIViewController的一個 subclass，所以將它包裹（wrap）在 struct 底下時，struct 必須要符合UIViewControllerRepresentable protocol（此處將 custom struct 取名為 “ImagePicker”）。 import SwiftUIstruct&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <img src="https://tommysush.github.io/media/posts/21/harpal-singh-_zKxPsGOGKg-unsplash.jpg" alt="Photo by Harpal Singh on Unsplash" />
+                
+  <p>
+    由於 <strong>SwiftUI</strong> 是從 iOS 13.0 才開始導入（目前版本為 iOS 14.4），相較於遠從 iOS 2.0 就已經存在的 <strong>UIKit</strong> 來說，簡直就像是新生兒一般的存在。因此，某些時候我們會希望能直接利用 UIKit 或其他較成熟的 Apple framework 所提供的程式碼來進行開發。
+  </p>
+
+  <p>
+    在進入正題之前，需對 UIKit 有一些基本的認識：
+  </p>
+
+  <ul>
+    <li>UIKit 的<code>UIView</code> class 是 layout 底下所有 views 的 parent class（views 包含 sliders、buttons…）。</li><li>而 UIKit 的<code>UIViewController</code> class 則是負責將 view 實現的程式碼，它和 UIView 一樣都擁有許多 subclass 負責不同的任務。</li><li>UIKit 使用的 design pattern 稱為 <strong>delegation（委派）</strong>，當 view 的狀態改變時就由它接手處理。</li>
+  </ul>
+
+  <p>
+    接下來，將以「<strong>使用者從 photo library（照片圖庫）挑選圖片</strong>」來進行說明與示範。這個動作將會使用 UIKit 底下的<code>UIImagePickerController</code>，和兩個 delegate protocol - 分別是<code>UINavigationControllerDelegate</code>和<code>UIImagePickerControllerDelegate</code>，但 SwiftUI 無法直接使用它們。
+  </p>
+
+  <p>
+    首先，<code>UIImagePickerController</code>是<code>UIViewController</code>的一個 subclass，所以將它包裹（wrap）在 struct 底下時，struct 必須要符合<code>UIViewControllerRepresentable</code> protocol（此處將 custom struct 取名為 “ImagePicker”）。
+  </p>
+<pre class="line-numbers  language-swift"><code>import SwiftUI
+
+struct ImagePicker: UIViewControllerRepresentable {
+    // more code
+}</code></pre>
+
+  <p>
+    根據如下的 SwiftUI 定義，一旦符合<code>UIViewControllerRepresentable</code>便可將其使用於 UI。
+  </p>
+<pre class="line-numbers  language-swift"><code>protocol UIViewControllerRepresentable : View where Self.Body == Never</code></pre>
+
+  <p>
+    接著，在 ImagePicker 底下創建兩個必要的方法：<code>makeUIViewController()</code>和<code>updateUIViewController()</code>。在<code>makeUIViewController()</code>裡必須創建一個所需的 UIImagePickerController 並回傳。至於<code>updateUIViewController()</code>裡則可留白，暫無需使用。
+  </p>
+<pre class="line-numbers  language-swift"><code>struct ImagePicker: UIViewControllerRepresentable {
+    func makeUIViewController(context: UIViewControllerRepresentableContext&lt;ImagePicker&gt;) -&gt; UIImagePickerController {
+        let picker = UIImagePickerController()
+        return picker
+    }
+
+    func updateUIViewController(_ uiViewController: UIImagePickerController, context: UIViewControllerRepresentableContext&lt;ImagePicker&gt;) {
+        // 暫且留白
+    }
+}</code></pre>
+
+  <p>
+    <strong>補充</strong>：此處有個較便捷的方式可產生這兩個 function，就是在 struct 底下先鍵入以下這段文字，然後在 Xcode 跳出的 alert message 中點按 fix 即可。
+  </p>
+<pre class="line-numbers  language-swift"><code>struct ImagePicker: UIViewControllerRepresentable {
+    typealias UIViewControllerType = UIImagePickerController
+}</code></pre>
+
+  <p>
+    完成以上步驟後，ImagePicker 算是擁有一半的功能，也就是能讓使用者從照片圖庫中選取圖片，但選完之後 SwiftUI 就不知下一步該做什麼。所以，必須接著完成前面 UIKit 基本認識中所說的第3點 - <strong>delegate</strong>。而 UIKit 所採用的 delegate 解決方案，在 SwiftUI 裡被稱為 <strong>coordinator</strong>，它是一個 object 專門負責對其綁定對象的事件做出反應。
+  </p>
+
+  <p>
+    接著，在 ImagePicker 底下創建一個 custom class，取名為 "<strong>Coordinator</strong>"。同時，新增方法 <code>makeCoordinator()</code>，並在其中產生一個 Coordinator 的實例。然後，在<code>makeUIViewController()</code>中，將 coordinator 指派給 picker 的 <strong>delegate</strong>。最後，SwiftUI 會檢查我們所創建的 Coordinator class 是否符合相應的 protocol（<code>NSObject</code>、<code>UINavigationControllerDelegate</code>、<code>UIImagePickerControllerDelegate</code>），所以還必須將其補上。
+  </p>
+<pre class="line-numbers  language-swift"><code>class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    // more code
+}
+
+func makeCoordinator() -&gt; Coordinator {
+    Coordinator()
+}
+
+func makeUIViewController(context: UIViewControllerRepresentableContext&lt;ImagePicker&gt;) -&gt; UIImagePickerController {
+    let picker = UIImagePickerController()
+    picker.delegate = context.coordinator
+    return picker
+}</code></pre>
+
+  <p>
+    最後，在使用者選取完圖片時，通常 UI 便會同步關閉選取視窗，並將所選的圖片通知其接手的 view。因此，我們還必須加上 presentationMode 的 Environment 變數，和存放所選圖片的 Binding 變數。另外，在 Coordinator class 裡，也必須在初始化時通知其所對應的對象為何。
+  </p>
+<pre class="line-numbers  language-swift"><code>struct ImagePicker: UIViewControllerRepresentable {
+    @Environment(\.presentationMaode) var presentationMode
+    @Binding var image: UIImage?
+
+    class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+        var parent: ImagePicker
+
+        init(_ parent: ImagePicker) {
+            self.parent = parent
+        }
+    }
+
+    func makeCoordinator() {
+        Coordinator(self)
+    }
+    
+    // ...略過程式碼
+}</code></pre>
+
+  <p>
+    至此，我們創建了一個包裹著 UIImagePickerController 的 struct，並可將其儲存為獨立的 swift 檔案，如此便能將其重複使用於類似的情境中。
+  </p>
             ]]>
         </content>
     </entry>
