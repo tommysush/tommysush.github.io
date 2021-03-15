@@ -5,6 +5,14 @@
 <loc>https://tommysush.github.io/</loc>
 </url>
 <url>
+<loc>https://tommysush.github.io/ask-myself.html</loc>
+<lastmod>2021-03-15T23:11:21+08:00</lastmod>
+<image:image>
+<image:loc>https://tommysush.github.io/media/posts/22/cristofer-jeschke-Ce3XLxac0f4-unsplash.jpg</image:loc>
+<image:title><![CDATA[Photo by Cristofer Jeschke on Unsplash]]></image:title>
+</image:image>
+</url>
+<url>
 <loc>https://tommysush.github.io/integrating-mapkit-with-swiftui-the-fisrt.html</loc>
 <lastmod>2021-03-11T18:48:16+08:00</lastmod>
 <image:image>
@@ -37,8 +45,11 @@
 </image:image>
 </url>
 <url>
+<loc>https://tommysush.github.io/page/2/</loc>
+</url>
+<url>
 <loc>https://tommysush.github.io/publii-support-for-google-photo-and-youtube.html</loc>
-<lastmod>2021-03-11T18:46:31+08:00</lastmod>
+<lastmod>2021-03-15T23:12:58+08:00</lastmod>
 <image:image>
 <image:loc>https://tommysush.github.io/media/posts/2/rajeshwar-bachu-K4txLik7pnY-unsplash.jpg</image:loc>
 <image:title><![CDATA[Photo by Rajeshwar Bachu on Unsplash]]></image:title>
