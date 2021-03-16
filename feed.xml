@@ -3,7 +3,7 @@
     <title>Lab3F</title>
     <link href="https://tommysush.github.io/feed.xml" rel="self" />
     <link href="https://tommysush.github.io" />
-    <updated>2021-03-16T23:23:10+08:00</updated>
+    <updated>2021-03-16T23:26:20+08:00</updated>
     <author>
         <name>PI of Lab3F</name>
     </author>
@@ -569,7 +569,7 @@ struct ContentView: View {
             <category term="Self-Taught"/>
             <category term="Build Website"/>
 
-        <updated>2021-03-11T18:48:39+08:00</updated>
+        <updated>2021-03-16T23:26:20+08:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://tommysush.github.io/media/posts/18/christopher-robin-ebbinghaus-pgSkeh0yl8o-unsplash.jpg" alt="Photo by Christopher Robin Ebbinghaus on Unsplash" />
